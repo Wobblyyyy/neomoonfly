@@ -41,7 +41,7 @@ let g:neomoonflyUnderlineMatchParen = get(g:, 'moonflyUnderlineMatchParen', 0)
 let g:neomoonflyVertSplits = get(g:, 'moonflyVertSplits', 1)
 
 " Background and foreground
-let s:black     = {"hex": '#00ff00', "term": 232}
+let s:black     = {"hex": '#000000', "term": 232}
 let s:white     = {"hex": '#ffffff', "term": 251}
 " Variations of charcoal-grey
 let s:grey0     = {"hex": '#323437', "term": 0  }
