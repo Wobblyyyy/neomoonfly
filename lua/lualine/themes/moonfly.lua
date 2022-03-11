@@ -1,6 +1,6 @@
--- moonfly color scheme for lualine
+-- neomoonfly color scheme for lualine
 --
--- URL:     github.com/bluz71/vim-moonfly-colors
+-- URL:     github.com/bluz71/vim-neomoonfly-colors
 -- License: MIT (https://opensource.org/licenses/MIT)
 
 -- LuaFormatter off

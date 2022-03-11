@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Base16 - GNOME Terminal color scheme install script
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Moonfly"
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="Moonfly"
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Neomoonfly"
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="Neomoonfly"
 [[ -z "$DCONF" ]] && DCONF=dconf
 [[ -z "$UUIDGEN" ]] && UUIDGEN=uuidgen
 
