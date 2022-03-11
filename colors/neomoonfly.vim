@@ -1,7 +1,9 @@
 " Dark Vim/Neovim color scheme.
 "
-" URL:     github.com/bluz71/vim-neomoonfly-colors
-" License: MIT (https://opensource.org/licenses/MIT)
+" original moonfly url:        https://github.com/bluz71/vim-neomoonfly-colors
+" neomoonfly url:              https://github.com/Wobblyyyy/neomoonfly
+" license: MIT (https://opensource.org/licenses/MIT)
+" all credit for the original moonfly theme goes to bluz71!
 
 " Clear highlights and reset syntax only when changing colorschemes.
 if exists('g:colors_name')
@@ -39,8 +41,8 @@ let g:neomoonflyUnderlineMatchParen = get(g:, 'moonflyUnderlineMatchParen', 0)
 let g:neomoonflyVertSplits = get(g:, 'moonflyVertSplits', 1)
 
 " Background and foreground
-let s:black     = {"hex": '#080808', "term": 232}
-let s:white     = {"hex": '#c6c6c6', "term": 251}
+let s:black     = {"hex": '#00ff00', "term": 232}
+let s:white     = {"hex": '#ffffff', "term": 251}
 " Variations of charcoal-grey
 let s:grey0     = {"hex": '#323437', "term": 0  }
 let s:grey254   = {"hex": '#e4e4e4', "term": 254}
