@@ -16,6 +16,21 @@ Although not even tangentially related to _neomoonfly_ or _moonfly_, bluz71,
 the creator of _moonfly_, maintains another theme named _nightfly_, which is
 available [here](https://github.com/bluz71/vim-nightfly-guicolors).
 
+Additional Configuration
+------------------------
+_neomoonfly_ adds a couple of "features," if you'll call them that, to the
+original _moonfly_. Those are as follows:
+- `g:neomoonflyCursorLine`: 0 to disable cursor line, 1 to enable cursor line
+- `g:neomoonflyCursorColumn`: 0 to disable cursor column, 1 to enable cursor column
+- `g:neomoonflyCursorLineColor`: a hex color (ex. `#00ff00`), highlights the
+  cursor's row/line when not in insert mode
+- `g:neomoonflyCursorColumnColor`: a hex color (ex. `#00ff00`), highlights the
+  cursor's column when not in insert mode
+- `g:neomoonflyCursorLineColorInsert`: a hex color (ex. `#00ff00`),
+  highlights the cursor's row/line when not in insert mode
+- `g:neomoonflyCursorColumnColorInsert`: a hex color (ex. `#00ff00`),
+  highlights the cursor's column when not in insert mode
+
 License
 -------
 

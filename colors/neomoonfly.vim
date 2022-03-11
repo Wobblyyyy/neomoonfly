@@ -1,49 +1,64 @@
-" Dark Vim/Neovim color scheme.
+" neomoonfly is a dark color scheme for vim and neovim based on the original
+" moonfly color scheme, created by bluz71
 "
 " original moonfly url:        https://github.com/bluz71/vim-neomoonfly-colors
 " neomoonfly url:              https://github.com/Wobblyyyy/neomoonfly
 " license: MIT (https://opensource.org/licenses/MIT)
-" all credit for the original moonfly theme goes to bluz71!
+"
+" file: neomoonfly.vim
+" author: bluz71, Wobblyyyy
+"
+" all credit for the original moonfly theme goes to bluz71
+"
+" this theme does not natively support terminal colors!
+" please use the gui colors options by adding the following to your vim config:
+" set termguicolors
 
-" Clear highlights and reset syntax only when changing colorschemes.
 if exists('g:colors_name')
     highlight clear
     if exists('syntax_on')
         syntax reset
     endif
 endif
+
 let g:colors_name='neomoonfly'
 
-" By default do not color the cursor.
-let g:neomoonflyCursorColor = get(g:, 'moonflyCursorColor', 0)
+let g:neomoonflyCursorColor = get(g:, 'neomoonflyCursorColor', 0)
+let g:neomoonflyItalics = get(g:, 'neomoonflyItalics', 1)
+let g:neomoonflyNormalFloat = get(g:, 'neomoonflyNormalFloat', 0)
+let g:neomoonflyTerminalColors = get(g:, 'neomoonflyTerminalColors', 1)
+let g:neomoonflyTransparent = get(g:, 'neomoonflyTransparent', 0)
+let g:neomoonflyUndercurls = get(g:, 'neomoonflyUndercurls', 1)
+let g:neomoonflyUnderlineMatchParen = get(g:, 'neomoonflyUnderlineMatchParen', 0)
+let g:neomoonflyVertSplits = get(g:, 'neomoonflyVertSplits', 1)
 
-" By default do use italics in GUI versions of Vim.
-let g:neomoonflyItalics = get(g:, 'moonflyItalics', 1)
+let g:neomoonflyCursorLine = get(g:, 'neomoonflyCursorLine', 1)
+let g:neomoonflyCursorColumn = get(g:, 'neomoonflyCursorColumn', 1)
+let g:neomoonflyCursorLineColor = get(g:, 'neomoonflyCursorLineColor', '#312a5e')
+let g:neomoonflyCursorColumnColor = get(g:, 'neomoonflyCursorColumnColor', '#312a5e')
+let g:neomoonflyCursorLineColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
+let g:neomoonflyCursorColumnColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
 
-" By default do not use a customized 'NormalFloat' highlight group (for Neovim
-" floating windows).
-let g:neomoonflyNormalFloat = get(g:, 'moonflyNormalFloat', 0)
+let g:neomoonflyKhaki = get(g:, 'neomoonflyKhaki', {"hex": '#dbd565', "term": 11})
+let g:neomoonflyYellow = get(g:, 'neomoonflyYellow', {"hex": '#fff654', "term": 3 })
+let g:neomoonflyOrange = get(g:, 'neomoonflyOrange', {"hex": '#de935f', "term": 7 })
+let g:neomoonflyCoral = get(g:, 'neomoonflyCoral', {"hex": '#f09479', "term": 8 })
+let g:neomoonflyLime = get(g:, 'neomoonflyLime', {"hex": '#85ff85', "term": 14})
+let g:neomoonflyGreen = get(g:, 'neomoonflyGreen', {"hex": '#40db3d', "term": 2 })
+let g:neomoonflyEmerald = get(g:, 'neomoonflyEmerald', {"hex": '#00ffa3', "term": 10})
+let g:neomoonflyBlue = get(g:, 'neomoonflyBlue', {"hex": '#80a0ff', "term": 4 })
+let g:neomoonflySky = get(g:, 'neomoonflySky', {"hex": '#00b7ff', "term": 12})
+let g:neomoonflyTurquoise = get(g:, 'neomoonflyTurquoise', {"hex": '#00ffc3', "term": 6 })
+let g:neomoonflyPurple = get(g:, 'neomoonflyPurple', {"hex": '#8a4fff', "term": 13})
+let g:neomoonflyCranberry = get(g:, 'neomoonflyCranberry', {"hex": '#ff38ac', "term": 15})
+let g:neomoonflyViolet = get(g:, 'neomoonflyViolet', {"hex": '#6d4ff2', "term": 5 })
+let g:neomoonflyCrimson = get(g:, 'neomoonflyCrimson', {"hex": '#c90036', "term": 9 })
+let g:neomoonflyRed = get(g:, 'neomoonflyRed', {"hex": '#ff4d4d', "term": 1 })
+let g:neomoonflySpring = get(g:, 'neomoonflySpring', {"hex": '#00875f', "term": 29})
 
-" By default use the neomoonfly color palette in the `:terminal`
-let g:neomoonflyTerminalColors = get(g:, 'moonflyTerminalColors', 1)
-
-" By default do not use a transparent background in GUI versions of Vim.
-let g:neomoonflyTransparent = get(g:, 'moonflyTransparent', 0)
-
-" By default do use undercurls in GUI versions of Vim, including terminal Vim
-" with termguicolors set.
-let g:neomoonflyUndercurls = get(g:, 'moonflyUndercurls', 1)
-
-" By default do not underline matching parentheses.
-let g:neomoonflyUnderlineMatchParen = get(g:, 'moonflyUnderlineMatchParen', 0)
-
-" By default do display vertical split columns.
-let g:neomoonflyVertSplits = get(g:, 'moonflyVertSplits', 1)
-
-" Background and foreground
 let s:black     = {"hex": '#000000', "term": 232}
 let s:white     = {"hex": '#ffffff', "term": 251}
-" Variations of charcoal-grey
+
 let s:grey0     = {"hex": '#323437', "term": 0  }
 let s:grey254   = {"hex": '#e4e4e4', "term": 254}
 let s:grey249   = {"hex": '#b2b2b2', "term": 249}
@@ -56,26 +71,54 @@ let s:grey236   = {"hex": '#303030', "term": 236}
 let s:grey235   = {"hex": '#262626', "term": 235}
 let s:grey234   = {"hex": '#1c1c1c', "term": 234}
 let s:grey233   = {"hex": '#121212', "term": 233}
-" Core theme colors
-let s:khaki     = {"hex": '#c2c292', "term": 11}
-let s:yellow    = {"hex": '#e3c78a', "term": 3 }
+
+let s:khaki     = {"hex": '#dbd565', "term": 11}
+let s:yellow    = {"hex": '#fff654', "term": 3 }
 let s:orange    = {"hex": '#de935f', "term": 7 }
 let s:coral     = {"hex": '#f09479', "term": 8 }
-let s:lime      = {"hex": '#85dc85', "term": 14}
-let s:green     = {"hex": '#8cc85f', "term": 2 }
-let s:emerald   = {"hex": '#36c692', "term": 10}
+let s:lime      = {"hex": '#85ff85', "term": 14}
+let s:green     = {"hex": '#40db3d', "term": 2 }
+let s:emerald   = {"hex": '#00ffa3', "term": 10}
 let s:blue      = {"hex": '#80a0ff', "term": 4 }
-let s:sky       = {"hex": '#74b2ff', "term": 12}
-let s:turquoise = {"hex": '#79dac8', "term": 6 }
-let s:purple    = {"hex": '#ae81ff', "term": 13}
-let s:cranberry = {"hex": '#e2637f', "term": 15}
-let s:violet    = {"hex": '#d183e8', "term": 5 }
-let s:crimson   = {"hex": '#ff5189', "term": 9 }
-let s:red       = {"hex": '#ff5454', "term": 1 }
-" Extra colors
+let s:sky       = {"hex": '#00b7ff', "term": 12}
+let s:turquoise = {"hex": '#00ffc3', "term": 6 }
+let s:purple    = {"hex": '#8a4fff', "term": 13}
+let s:cranberry = {"hex": '#ff38ac', "term": 15}
+let s:violet    = {"hex": '#6d4ff2', "term": 5 }
+let s:crimson   = {"hex": '#c90036', "term": 9 }
+let s:red       = {"hex": '#ff4d4d', "term": 1 }
 let s:spring    = {"hex": '#00875f', "term": 29}
 
-" Specify the colors used by the inbuilt terminal of Neovim and Vim
+function s:OnInsertLeave ()
+    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColor
+    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColor
+endfunction
+
+function s:OnInsertEnter ()
+    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColorInsert
+    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColorInsert
+endfunction
+
+function s:SetUpCursorLineAndColumn ()
+    if g:neomoonflyCursorLine == 1
+        set cursorline
+    endif
+
+    if g:neomoonflyCursorColumn == 1
+        set cursorcolumn
+    endif
+
+    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColor
+    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColor
+
+    augroup line
+        autocmd! InsertLeave * call s:OnInsertLeave()
+        autocmd! InsertEnter * call s:OnInsertEnter()
+    augroup END
+endfunction
+
+call s:SetUpCursorLineAndColumn()
+
 if g:neomoonflyTerminalColors
     if has('nvim')
         let g:terminal_color_0  = s:grey0.hex
@@ -111,7 +154,6 @@ else
     exec 'highlight Normal ctermbg=' . s:black.term . ' ctermfg=' . s:white.term . ' guibg=' . s:black.hex . ' guifg=' . s:white.hex
 endif
 
-" Custom neomoonfly highlight groups
 exec 'highlight NeomoonflyReset ctermfg=fg guifg=fg'
 exec 'highlight NeomoonflyVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey0.hex
 exec 'highlight NeomoonflyWhite ctermfg=' . s:white.term . ' guifg=' . s:white.hex
@@ -155,19 +197,14 @@ else
     exec 'highlight Comment ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex
 endif
 
-" Functions
 highlight! link Function NeomoonflySky
-
-" Strings
 highlight! link String NeomoonflyKhaki
-
-" Booleans
 highlight! link Boolean NeomoonflyCoral
 
-" Identifiers
+" identifiers
 exec 'highlight Identifier ctermfg=' . s:turquoise.term . ' cterm=none guifg=' . s:turquoise.hex
 
-" Color of titles
+" titles
 exec 'highlight Title ctermfg=' . s:orange.term . ' guifg=' . s:orange.hex . ' gui=none'
 
 " const, static
@@ -176,13 +213,13 @@ highlight! link StorageClass NeomoonflyCoral
 " void, intptr_t
 exec 'highlight Type ctermfg=' . s:emerald.term . ' guifg=' . s:emerald.hex . ' gui=none'
 
-" Numbers
+" number literals
 highlight! link Constant NeomoonflyOrange
 
-" Character constants
+" character constants
 highlight! link Character NeomoonflyPurple
 
-" Exceptions
+" exceptions
 highlight! link Exception NeomoonflyCrimson
 
 " ifdef/endif
@@ -200,7 +237,7 @@ highlight! link Operator NeomoonflyCranberry
 " for, while
 highlight! link Repeat NeomoonflyViolet
 
-" Search
+" search
 exec 'highlight Search ctermbg=bg ctermfg=' . s:coral.term . ' cterm=reverse guibg=bg guifg=' . s:coral.hex . ' gui=reverse'
 exec 'highlight IncSearch ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
 
@@ -267,9 +304,6 @@ else
     exec 'highlight Cursor ctermfg=bg ctermbg=' . s:grey247.term . ' guifg=bg guibg=' . s:grey247.hex
 endif
 exec 'highlight lCursor ctermfg=bg ctermbg=' . s:grey247.term . ' guifg=bg guibg=' . s:grey247.hex
-exec 'highlight CursorLineNr ctermbg=' . s:grey234.term . ' ctermfg=' . s:blue.term . ' cterm=none guibg=' . s:grey234.hex . ' guifg=' . s:blue.hex . ' gui=none'
-exec 'highlight CursorColumn ctermbg=' . s:grey234.term . ' cterm=none guibg=' . s:grey234.hex
-exec 'highlight CursorLine ctermbg=' . s:grey234.term . ' cterm=none guibg=' . s:grey234.hex
 exec 'highlight Folded ctermbg=' . s:grey234.term . ' ctermfg=' . s:lime.term . ' guibg=' . s:grey234.hex . ' guifg='. s:lime.hex
 exec 'highlight FoldColumn ctermbg=' . s:grey236.term . ' ctermfg=' . s:lime.term . ' guibg=' . s:grey236.hex . ' guifg=' . s:lime.hex
 exec 'highlight SignColumn ctermbg=bg ctermfg=' . s:lime.term . ' guibg=bg guifg=' . s:lime.hex
