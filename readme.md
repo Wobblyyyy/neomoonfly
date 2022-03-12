@@ -34,6 +34,18 @@ available [here](https://github.com/bluz71/vim-nightfly-guicolors).
 ### YML/YAML
 ![yml.png](./screenshots/yml.png)
 
+### C++
+![c++.png](./screenshots/c++.png)
+
+### HTML
+![html.png](./screenshots/html.png)
+
+### V
+![v.png](./screenshots/v.png)
+
+### Python
+![python.png](./screenshots/python.png)
+
 ## Additional Configuration
 _neomoonfly_ adds a couple of "features," if you'll call them that, to the
 original _moonfly_. Those are as follows:
