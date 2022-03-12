@@ -13,6 +13,10 @@
 " this theme does not natively support terminal colors!
 " please use the gui colors options by adding the following to your vim config:
 " set termguicolors
+"
+" for more customization options, check out the neomoonflyext color scheme
+" this one is suggested for performance reasons, but the other one works
+" just as well
 
 if exists('g:colors_name')
     highlight clear
@@ -38,6 +42,10 @@ let g:neomoonflyCursorLineColor = get(g:, 'neomoonflyCursorLineColor', '#312a5e'
 let g:neomoonflyCursorColumnColor = get(g:, 'neomoonflyCursorColumnColor', '#312a5e')
 let g:neomoonflyCursorLineColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
 let g:neomoonflyCursorColumnColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
+let g:neomoonflyNormalBg = get(g:, 'neomoonflyNormalBg', '#000000')
+let g:neomoonflyNormalFg = get(g:, 'neomoonflyNormalFg', '#7de8aa')
+let g:neomoonflyLineNrBg = get(g:, 'neomoonflyLineNrBg', '#000000')
+let g:neomoonflyLineNrFg = get(g:, 'neomoonflyLineNrFg', '#00ffd9')
 
 let g:neomoonflyBlack = get(g:, 'neomoonflyBlack', {"hex": '#000000', "term": 232})
 let g:neomoonflyWhite = get(g:, 'neomoonflyWhite', {"hex": '#ffffff', "term": 251})
@@ -1037,4 +1045,9 @@ if has('nvim')
     highlight! link CmpItemMenu NeomoonflyGrey247
 endif
 
+" of course, we need to have a dark background
+" i mean... how could you not?
 set background=dark
+
+exec 'hi Normal guibg=' . g:neomoonflyNormalBg . ' guifg=' . g:neomoonflyNormalFg
+exec 'hi LineNr guibg=' . g:neomoonflyLineNrBg . ' guifg=' . g:neomoonflyLineNrFg
