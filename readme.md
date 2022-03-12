@@ -15,7 +15,7 @@ the creator of _moonfly_, maintains another theme named _nightfly_, which is
 available [here](https://github.com/bluz71/vim-nightfly-guicolors).
 
 ## Screenshots
-Check out all some screenshots [here](./screenshots/readme.md).
+Check out some screenshots [here](./screenshots/readme.md).
 
 ## Additional Configuration
 _neomoonfly_ adds a couple of "features," if you'll call them that, to the
