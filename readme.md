@@ -31,6 +31,10 @@ original _moonfly_. Those are as follows:
   highlights the cursor's row/line when not in insert mode
 - `g:neomoonflyCursorColumnColorInsert`: a hex color (ex. `#00ff00`),
   highlights the cursor's column when not in insert mode
+- `g:neomoonflyNormalBg`: a hex color, default text background
+- `g:neomoonflyNormalFg`: a hex color, default text foreground
+- `g:neomoonflyLineNrBg`: a hex color, default line number background
+- `g:neomoonflyLineNrFg`: a hex color, defualt line number foreground
 
 ## _neomoonflyext_ color scheme
 Click [here](./neomoonflyext.md) to learn more!
