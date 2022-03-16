@@ -25,7 +25,7 @@ if exists('g:colors_name')
     endif
 endif
 
-let g:colors_name='nfm'
+let g:colors_name='nmf'
 
 let g:nfmCursorColor = get(g:, 'nfmCursorColor', 0)
 let g:nfmItalics = get(g:, 'nfmItalics', 1)
