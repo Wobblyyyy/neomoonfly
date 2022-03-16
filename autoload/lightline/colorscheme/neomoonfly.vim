@@ -1,6 +1,6 @@
-" neomoonfly color scheme for lightline (github.com/itchyny/lightline.vim).
+" nfm color scheme for lightline (github.com/itchyny/lightline.vim).
 "
-" URL:     github.com/bluz71/vim-neomoonfly-colors
+" URL:     github.com/bluz71/vim-nfm-colors
 " License: MIT (https://opensource.org/licenses/MIT)
 
 let s:white   = ['#c6c6c6', 251]
@@ -39,5 +39,5 @@ if exists('g:lightline')
     let s:p.tabline.right   = [[s:grey247, s:grey236]]
     let s:p.tabline.tabsel  = [[s:blue,    s:grey236]]
 
-    let g:lightline#colorscheme#neomoonfly#palette = lightline#colorscheme#flatten(s:p)
+    let g:lightline#colorscheme#nfm#palette = lightline#colorscheme#flatten(s:p)
 endif

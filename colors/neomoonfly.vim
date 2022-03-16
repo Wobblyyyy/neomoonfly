@@ -1,11 +1,11 @@
-" neomoonfly is a dark color scheme for vim and neovim based on the original
+" nfm is a dark color scheme for vim and neovim based on the original
 " moonfly color scheme, created by bluz71
 "
-" original moonfly url:        https://github.com/bluz71/vim-neomoonfly-colors
-" neomoonfly url:              https://github.com/Wobblyyyy/neomoonfly
+" original moonfly url:        https://github.com/bluz71/vim-nfm-colors
+" nfm url:              https://github.com/Wobblyyyy/nfm
 " license: MIT (https://opensource.org/licenses/MIT)
 "
-" file: neomoonfly.vim
+" file: nfm.vim
 " author: bluz71, Wobblyyyy
 "
 " all credit for the original moonfly theme goes to bluz71
@@ -14,7 +14,7 @@
 " please use the gui colors options by adding the following to your vim config:
 " set termguicolors
 "
-" for more customization options, check out the neomoonflyext color scheme
+" for more customization options, check out the nfmext color scheme
 " this one is suggested for performance reasons, but the other one works
 " just as well
 
@@ -25,115 +25,115 @@ if exists('g:colors_name')
     endif
 endif
 
-let g:colors_name='neomoonfly'
+let g:colors_name='nfm'
 
-let g:neomoonflyCursorColor = get(g:, 'neomoonflyCursorColor', 0)
-let g:neomoonflyItalics = get(g:, 'neomoonflyItalics', 1)
-let g:neomoonflyNormalFloat = get(g:, 'neomoonflyNormalFloat', 0)
-let g:neomoonflyTerminalColors = get(g:, 'neomoonflyTerminalColors', 1)
-let g:neomoonflyTransparent = get(g:, 'neomoonflyTransparent', 0)
-let g:neomoonflyUndercurls = get(g:, 'neomoonflyUndercurls', 1)
-let g:neomoonflyUnderlineMatchParen = get(g:, 'neomoonflyUnderlineMatchParen', 0)
-let g:neomoonflyVertSplits = get(g:, 'neomoonflyVertSplits', 1)
+let g:nfmCursorColor = get(g:, 'nfmCursorColor', 0)
+let g:nfmItalics = get(g:, 'nfmItalics', 1)
+let g:nfmNormalFloat = get(g:, 'nfmNormalFloat', 0)
+let g:nfmTerminalColors = get(g:, 'nfmTerminalColors', 1)
+let g:nfmTransparent = get(g:, 'nfmTransparent', 0)
+let g:nfmUndercurls = get(g:, 'nfmUndercurls', 1)
+let g:nfmUnderlineMatchParen = get(g:, 'nfmUnderlineMatchParen', 0)
+let g:nfmVertSplits = get(g:, 'nfmVertSplits', 1)
 
-let g:neomoonflyCursorLine = get(g:, 'neomoonflyCursorLine', 1)
-let g:neomoonflyCursorColumn = get(g:, 'neomoonflyCursorColumn', 1)
-let g:neomoonflyCursorLineColor = get(g:, 'neomoonflyCursorLineColor', '#312a5e')
-let g:neomoonflyCursorColumnColor = get(g:, 'neomoonflyCursorColumnColor', '#312a5e')
-let g:neomoonflyCursorLineColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
-let g:neomoonflyCursorColumnColorInsert = get(g:, 'neomoonflyCursorLineColorInsert', '#23007a')
-let g:neomoonflyNormalBg = get(g:, 'neomoonflyNormalBg', '#000000')
-let g:neomoonflyNormalFg = get(g:, 'neomoonflyNormalFg', '#7de8aa')
-let g:neomoonflyLineNrBg = get(g:, 'neomoonflyLineNrBg', '#000000')
-let g:neomoonflyLineNrFg = get(g:, 'neomoonflyLineNrFg', '#00ffd9')
+let g:nfmCursorLine = get(g:, 'nfmCursorLine', 1)
+let g:nfmCursorColumn = get(g:, 'nfmCursorColumn', 1)
+let g:nfmCursorLineColor = get(g:, 'nfmCursorLineColor', '#312a5e')
+let g:nfmCursorColumnColor = get(g:, 'nfmCursorColumnColor', '#312a5e')
+let g:nfmCursorLineColorInsert = get(g:, 'nfmCursorLineColorInsert', '#23007a')
+let g:nfmCursorColumnColorInsert = get(g:, 'nfmCursorLineColorInsert', '#23007a')
+let g:nfmNormalBg = get(g:, 'nfmNormalBg', '#000000')
+let g:nfmNormalFg = get(g:, 'nfmNormalFg', '#7de8aa')
+let g:nfmLineNrBg = get(g:, 'nfmLineNrBg', '#000000')
+let g:nfmLineNrFg = get(g:, 'nfmLineNrFg', '#00ffd9')
 
-let g:neomoonflyBlack = get(g:, 'neomoonflyBlack', {"hex": '#000000', "term": 232})
-let g:neomoonflyWhite = get(g:, 'neomoonflyWhite', {"hex": '#ffffff', "term": 251})
+let g:nfmBlack = get(g:, 'nfmBlack', {"hex": '#000000', "term": 232})
+let g:nfmWhite = get(g:, 'nfmWhite', {"hex": '#ffffff', "term": 251})
 
-let g:neomoonflyGrey0 = get(g:, 'neomoonflyGrey0', {"hex": '#323437', "term": 0  })
-let g:neomoonflyGrey254 = get(g:, 'neomoonflyGrey254', {"hex": '#e4e4e4', "term": 254})
-let g:neomoonflyGrey249 = get(g:, 'neomoonflyGrey249', {"hex": '#b2b2b2', "term": 249})
-let g:neomoonflyGrey247 = get(g:, 'neomoonflyGrey247', {"hex": '#9e9e9e', "term": 247})
-let g:neomoonflyGrey246 = get(g:, 'neomoonflyGrey246', {"hex": '#949494', "term": 246})
-let g:neomoonflyGrey244 = get(g:, 'neomoonflyGrey244', {"hex": '#808080', "term": 244})
-let g:neomoonflyGrey241 = get(g:, 'neomoonflyGrey241', {"hex": '#626262', "term": 241})
-let g:neomoonflyGrey237 = get(g:, 'neomoonflyGrey237', {"hex": '#3a3a3a', "term": 237})
-let g:neomoonflyGrey236 = get(g:, 'neomoonflyGrey236', {"hex": '#303030', "term": 236})
-let g:neomoonflyGrey235 = get(g:, 'neomoonflyGrey235', {"hex": '#262626', "term": 235})
-let g:neomoonflyGrey234 = get(g:, 'neomoonflyGrey234', {"hex": '#1c1c1c', "term": 234})
-let g:neomoonflyGrey233 = get(g:, 'neomoonflyGrey233', {"hex": '#121212', "term": 233})
+let g:nfmGrey0 = get(g:, 'nfmGrey0', {"hex": '#323437', "term": 0  })
+let g:nfmGrey254 = get(g:, 'nfmGrey254', {"hex": '#e4e4e4', "term": 254})
+let g:nfmGrey249 = get(g:, 'nfmGrey249', {"hex": '#b2b2b2', "term": 249})
+let g:nfmGrey247 = get(g:, 'nfmGrey247', {"hex": '#9e9e9e', "term": 247})
+let g:nfmGrey246 = get(g:, 'nfmGrey246', {"hex": '#949494', "term": 246})
+let g:nfmGrey244 = get(g:, 'nfmGrey244', {"hex": '#808080', "term": 244})
+let g:nfmGrey241 = get(g:, 'nfmGrey241', {"hex": '#626262', "term": 241})
+let g:nfmGrey237 = get(g:, 'nfmGrey237', {"hex": '#3a3a3a', "term": 237})
+let g:nfmGrey236 = get(g:, 'nfmGrey236', {"hex": '#303030', "term": 236})
+let g:nfmGrey235 = get(g:, 'nfmGrey235', {"hex": '#262626', "term": 235})
+let g:nfmGrey234 = get(g:, 'nfmGrey234', {"hex": '#1c1c1c', "term": 234})
+let g:nfmGrey233 = get(g:, 'nfmGrey233', {"hex": '#121212', "term": 233})
 
-let g:neomoonflyKhaki = get(g:, 'neomoonflyKhaki', {"hex": '#dbd565', "term": 11})
-let g:neomoonflyYellow = get(g:, 'neomoonflyYellow', {"hex": '#fff654', "term": 3 })
-let g:neomoonflyOrange = get(g:, 'neomoonflyOrange', {"hex": '#de935f', "term": 7 })
-let g:neomoonflyCoral = get(g:, 'neomoonflyCoral', {"hex": '#f09479', "term": 8 })
-let g:neomoonflyLime = get(g:, 'neomoonflyLime', {"hex": '#85ff85', "term": 14})
-let g:neomoonflyGreen = get(g:, 'neomoonflyGreen', {"hex": '#40db3d', "term": 2 })
-let g:neomoonflyEmerald = get(g:, 'neomoonflyEmerald', {"hex": '#00ffa3', "term": 10})
-let g:neomoonflyBlue = get(g:, 'neomoonflyBlue', {"hex": '#80a0ff', "term": 4 })
-let g:neomoonflySky = get(g:, 'neomoonflySky', {"hex": '#00b7ff', "term": 12})
-let g:neomoonflyTurquoise = get(g:, 'neomoonflyTurquoise', {"hex": '#00ffc3', "term": 6 })
-let g:neomoonflyPurple = get(g:, 'neomoonflyPurple', {"hex": '#8a4fff', "term": 13})
-let g:neomoonflyCranberry = get(g:, 'neomoonflyCranberry', {"hex": '#ff38ac', "term": 15})
-let g:neomoonflyViolet = get(g:, 'neomoonflyViolet', {"hex": '#6d4ff2', "term": 5 })
-let g:neomoonflyCrimson = get(g:, 'neomoonflyCrimson', {"hex": '#c90036', "term": 9 })
-let g:neomoonflyRed = get(g:, 'neomoonflyRed', {"hex": '#ff4d4d', "term": 1 })
-let g:neomoonflySpring = get(g:, 'neomoonflySpring', {"hex": '#00875f', "term": 29})
+let g:nfmKhaki = get(g:, 'nfmKhaki', {"hex": '#dbd565', "term": 11})
+let g:nfmYellow = get(g:, 'nfmYellow', {"hex": '#fff654', "term": 3 })
+let g:nfmOrange = get(g:, 'nfmOrange', {"hex": '#de935f', "term": 7 })
+let g:nfmCoral = get(g:, 'nfmCoral', {"hex": '#f09479', "term": 8 })
+let g:nfmLime = get(g:, 'nfmLime', {"hex": '#85ff85', "term": 14})
+let g:nfmGreen = get(g:, 'nfmGreen', {"hex": '#40db3d', "term": 2 })
+let g:nfmEmerald = get(g:, 'nfmEmerald', {"hex": '#00ffa3', "term": 10})
+let g:nfmBlue = get(g:, 'nfmBlue', {"hex": '#80a0ff', "term": 4 })
+let g:nfmSky = get(g:, 'nfmSky', {"hex": '#00b7ff', "term": 12})
+let g:nfmTurquoise = get(g:, 'nfmTurquoise', {"hex": '#00ffc3', "term": 6 })
+let g:nfmPurple = get(g:, 'nfmPurple', {"hex": '#8a4fff', "term": 13})
+let g:nfmCranberry = get(g:, 'nfmCranberry', {"hex": '#ff38ac', "term": 15})
+let g:nfmViolet = get(g:, 'nfmViolet', {"hex": '#6d4ff2', "term": 5 })
+let g:nfmCrimson = get(g:, 'nfmCrimson', {"hex": '#c90036', "term": 9 })
+let g:nfmRed = get(g:, 'nfmRed', {"hex": '#ff4d4d', "term": 1 })
+let g:nfmSpring = get(g:, 'nfmSpring', {"hex": '#00875f', "term": 29})
 
-let s:black = g:neomoonflyBlack
-let s:white = g:neomoonflyWhite
+let s:black = g:nfmBlack
+let s:white = g:nfmWhite
 
-let s:grey0 = g:neomoonflyGrey0
-let s:grey254 = g:neomoonflyGrey254
-let s:grey249 = g:neomoonflyGrey249
-let s:grey247 = g:neomoonflyGrey247
-let s:grey246 = g:neomoonflyGrey246
-let s:grey244 = g:neomoonflyGrey244
-let s:grey241 = g:neomoonflyGrey241
-let s:grey237 = g:neomoonflyGrey237
-let s:grey236 = g:neomoonflyGrey236
-let s:grey235 = g:neomoonflyGrey235
-let s:grey234 = g:neomoonflyGrey234
-let s:grey233 = g:neomoonflyGrey233
+let s:grey0 = g:nfmGrey0
+let s:grey254 = g:nfmGrey254
+let s:grey249 = g:nfmGrey249
+let s:grey247 = g:nfmGrey247
+let s:grey246 = g:nfmGrey246
+let s:grey244 = g:nfmGrey244
+let s:grey241 = g:nfmGrey241
+let s:grey237 = g:nfmGrey237
+let s:grey236 = g:nfmGrey236
+let s:grey235 = g:nfmGrey235
+let s:grey234 = g:nfmGrey234
+let s:grey233 = g:nfmGrey233
 
-let s:khaki = g:neomoonflyKhaki
-let s:yellow = g:neomoonflyYellow
-let s:orange = g:neomoonflyOrange
-let s:coral = g:neomoonflyCoral
-let s:lime = g:neomoonflyLime
-let s:green = g:neomoonflyGreen
-let s:emerald = g:neomoonflyEmerald
-let s:blue = g:neomoonflyBlue
-let s:sky = g:neomoonflySky
-let s:turquoise = g:neomoonflyTurquoise
-let s:purple = g:neomoonflyPurple
-let s:cranberry = g:neomoonflyCranberry
-let s:violet = g:neomoonflyViolet
-let s:crimson = g:neomoonflyCrimson
-let s:red = g:neomoonflyRed
-let s:spring = g:neomoonflySpring
+let s:khaki = g:nfmKhaki
+let s:yellow = g:nfmYellow
+let s:orange = g:nfmOrange
+let s:coral = g:nfmCoral
+let s:lime = g:nfmLime
+let s:green = g:nfmGreen
+let s:emerald = g:nfmEmerald
+let s:blue = g:nfmBlue
+let s:sky = g:nfmSky
+let s:turquoise = g:nfmTurquoise
+let s:purple = g:nfmPurple
+let s:cranberry = g:nfmCranberry
+let s:violet = g:nfmViolet
+let s:crimson = g:nfmCrimson
+let s:red = g:nfmRed
+let s:spring = g:nfmSpring
 
 function s:OnInsertLeave ()
-    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColor
-    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColor
+    exec 'hi CursorLine guibg=' . g:nfmCursorLineColor
+    exec 'hi CursorColumn guibg=' . g:nfmCursorColumnColor
 endfunction
 
 function s:OnInsertEnter ()
-    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColorInsert
-    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColorInsert
+    exec 'hi CursorLine guibg=' . g:nfmCursorLineColorInsert
+    exec 'hi CursorColumn guibg=' . g:nfmCursorColumnColorInsert
 endfunction
 
 function s:SetUpCursorLineAndColumn ()
-    if g:neomoonflyCursorLine == 1
+    if g:nfmCursorLine == 1
         set cursorline
     endif
 
-    if g:neomoonflyCursorColumn == 1
+    if g:nfmCursorColumn == 1
         set cursorcolumn
     endif
 
-    exec 'hi CursorLine guibg=' . g:neomoonflyCursorLineColor
-    exec 'hi CursorColumn guibg=' . g:neomoonflyCursorColumnColor
+    exec 'hi CursorLine guibg=' . g:nfmCursorLineColor
+    exec 'hi CursorColumn guibg=' . g:nfmCursorColumnColor
 
     augroup line
         autocmd! InsertLeave * call s:OnInsertLeave()
@@ -143,7 +143,7 @@ endfunction
 
 call s:SetUpCursorLineAndColumn()
 
-if g:neomoonflyTerminalColors
+if g:nfmTerminalColors
     if has('nvim')
         let g:terminal_color_0  = s:grey0.hex
         let g:terminal_color_1  = s:red.hex
@@ -172,58 +172,58 @@ if g:neomoonflyTerminalColors
 endif
 
 " Background and text
-if g:neomoonflyTransparent
+if g:nfmTransparent
     exec 'highlight Normal ctermbg=' . s:black.term . ' ctermfg=' . s:white.term . ' guibg=NONE guifg=' . s:white.hex
 else
     exec 'highlight Normal ctermbg=' . s:black.term . ' ctermfg=' . s:white.term . ' guibg=' . s:black.hex . ' guifg=' . s:white.hex
 endif
 
-exec 'highlight NeomoonflyReset ctermfg=fg guifg=fg'
-exec 'highlight NeomoonflyVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey0.hex
-exec 'highlight NeomoonflyWhite ctermfg=' . s:white.term . ' guifg=' . s:white.hex
-exec 'highlight NeomoonflyGrey0 ctermfg=' . s:grey0.term . ' guifg=' . s:grey0.hex
-exec 'highlight NeomoonflyGrey254 ctermfg=' . s:grey254.term . ' guifg=' . s:grey254.hex
-exec 'highlight NeomoonflyGrey249 ctermfg=' . s:grey249.term . ' guifg=' . s:grey249.hex
-exec 'highlight NeomoonflyGrey247 ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex
-exec 'highlight NeomoonflyGrey246 ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex
-exec 'highlight NeomoonflyGrey241 ctermfg=' . s:grey241.term . ' guifg=' . s:grey241.hex
-exec 'highlight NeomoonflyGrey236 ctermfg=' . s:grey236.term . ' guifg=' . s:grey236.hex
-exec 'highlight NeomoonflyKhaki ctermfg=' . s:khaki.term . ' guifg=' . s:khaki.hex
-exec 'highlight NeomoonflyYellow ctermfg=' . s:yellow.term . ' guifg=' . s:yellow.hex
-exec 'highlight NeomoonflyOrange ctermfg=' . s:orange.term . ' guifg=' . s:orange.hex
-exec 'highlight NeomoonflyCoral ctermfg=' . s:coral.term . ' guifg=' . s:coral.hex
-exec 'highlight NeomoonflyLime ctermfg=' . s:lime.term . ' guifg=' . s:lime.hex
-exec 'highlight NeomoonflyGreen ctermfg=' . s:green.term . ' guifg=' . s:green.hex
-exec 'highlight NeomoonflyEmerald ctermfg=' . s:emerald.term . ' guifg=' . s:emerald.hex
-exec 'highlight NeomoonflyBlue ctermfg=' . s:blue.term . ' guifg=' . s:blue.hex
-exec 'highlight NeomoonflySky ctermfg=' . s:sky.term . ' guifg=' . s:sky.hex
-exec 'highlight NeomoonflyTurquoise ctermfg=' . s:turquoise.term . ' guifg=' . s:turquoise.hex
-exec 'highlight NeomoonflyPurple ctermfg=' . s:purple.term . ' guifg=' . s:purple.hex
-exec 'highlight NeomoonflyCranberry ctermfg=' . s:cranberry.term . ' guifg=' . s:cranberry.hex
-exec 'highlight NeomoonflyViolet ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex
-exec 'highlight NeomoonflyCrimson ctermfg=' . s:crimson.term . ' guifg=' . s:crimson.hex
-exec 'highlight NeomoonflyRed ctermfg=' . s:red.term . ' guifg=' . s:red.hex
-exec 'highlight NeomoonflyWhiteAlert ctermbg=bg ctermfg=' . s:white.term . ' guibg=bg guifg=' . s:white.hex
-exec 'highlight NeomoonflyYellowAlert ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
-exec 'highlight NeomoonflyCoralAlert ctermbg=bg ctermfg=' . s:coral.term . ' guibg=bg guifg=' . s:coral.hex
-exec 'highlight NeomoonflyEmeraldAlert ctermbg=bg ctermfg=' . s:emerald.term . ' guibg=bg guifg=' . s:emerald.hex
-exec 'highlight NeomoonflyPurpleAlert ctermbg=bg ctermfg=' . s:purple.term . ' guibg=bg guifg=' . s:purple.hex
-exec 'highlight NeomoonflySkyAlert ctermbg=bg ctermfg=' . s:sky.term . ' guibg=bg guifg=' . s:sky.hex
-exec 'highlight NeomoonflyRedAlert ctermbg=bg ctermfg=' . s:red.term . ' guibg=bg guifg=' . s:red.hex
+exec 'highlight NfmReset ctermfg=fg guifg=fg'
+exec 'highlight NfmVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey0.hex
+exec 'highlight NfmWhite ctermfg=' . s:white.term . ' guifg=' . s:white.hex
+exec 'highlight NfmGrey0 ctermfg=' . s:grey0.term . ' guifg=' . s:grey0.hex
+exec 'highlight NfmGrey254 ctermfg=' . s:grey254.term . ' guifg=' . s:grey254.hex
+exec 'highlight NfmGrey249 ctermfg=' . s:grey249.term . ' guifg=' . s:grey249.hex
+exec 'highlight NfmGrey247 ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex
+exec 'highlight NfmGrey246 ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex
+exec 'highlight NfmGrey241 ctermfg=' . s:grey241.term . ' guifg=' . s:grey241.hex
+exec 'highlight NfmGrey236 ctermfg=' . s:grey236.term . ' guifg=' . s:grey236.hex
+exec 'highlight NfmKhaki ctermfg=' . s:khaki.term . ' guifg=' . s:khaki.hex
+exec 'highlight NfmYellow ctermfg=' . s:yellow.term . ' guifg=' . s:yellow.hex
+exec 'highlight NfmOrange ctermfg=' . s:orange.term . ' guifg=' . s:orange.hex
+exec 'highlight NfmCoral ctermfg=' . s:coral.term . ' guifg=' . s:coral.hex
+exec 'highlight NfmLime ctermfg=' . s:lime.term . ' guifg=' . s:lime.hex
+exec 'highlight NfmGreen ctermfg=' . s:green.term . ' guifg=' . s:green.hex
+exec 'highlight NfmEmerald ctermfg=' . s:emerald.term . ' guifg=' . s:emerald.hex
+exec 'highlight NfmBlue ctermfg=' . s:blue.term . ' guifg=' . s:blue.hex
+exec 'highlight NfmSky ctermfg=' . s:sky.term . ' guifg=' . s:sky.hex
+exec 'highlight NfmTurquoise ctermfg=' . s:turquoise.term . ' guifg=' . s:turquoise.hex
+exec 'highlight NfmPurple ctermfg=' . s:purple.term . ' guifg=' . s:purple.hex
+exec 'highlight NfmCranberry ctermfg=' . s:cranberry.term . ' guifg=' . s:cranberry.hex
+exec 'highlight NfmViolet ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex
+exec 'highlight NfmCrimson ctermfg=' . s:crimson.term . ' guifg=' . s:crimson.hex
+exec 'highlight NfmRed ctermfg=' . s:red.term . ' guifg=' . s:red.hex
+exec 'highlight NfmWhiteAlert ctermbg=bg ctermfg=' . s:white.term . ' guibg=bg guifg=' . s:white.hex
+exec 'highlight NfmYellowAlert ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
+exec 'highlight NfmCoralAlert ctermbg=bg ctermfg=' . s:coral.term . ' guibg=bg guifg=' . s:coral.hex
+exec 'highlight NfmEmeraldAlert ctermbg=bg ctermfg=' . s:emerald.term . ' guibg=bg guifg=' . s:emerald.hex
+exec 'highlight NfmPurpleAlert ctermbg=bg ctermfg=' . s:purple.term . ' guibg=bg guifg=' . s:purple.hex
+exec 'highlight NfmSkyAlert ctermbg=bg ctermfg=' . s:sky.term . ' guibg=bg guifg=' . s:sky.hex
+exec 'highlight NfmRedAlert ctermbg=bg ctermfg=' . s:red.term . ' guibg=bg guifg=' . s:red.hex
 
 " Color of mode text, -- INSERT --
 exec 'highlight ModeMsg ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex . ' gui=none'
 
 " Comments
-if g:neomoonflyItalics
+if g:nfmItalics
     exec 'highlight Comment ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex . ' gui=italic'
 else
     exec 'highlight Comment ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex
 endif
 
-highlight! link Function NeomoonflySky
-highlight! link String NeomoonflyKhaki
-highlight! link Boolean NeomoonflyCoral
+highlight! link Function NfmSky
+highlight! link String NfmKhaki
+highlight! link Boolean NfmCoral
 
 " identifiers
 exec 'highlight Identifier ctermfg=' . s:turquoise.term . ' cterm=none guifg=' . s:turquoise.hex
@@ -232,47 +232,47 @@ exec 'highlight Identifier ctermfg=' . s:turquoise.term . ' cterm=none guifg=' .
 exec 'highlight Title ctermfg=' . s:orange.term . ' guifg=' . s:orange.hex . ' gui=none'
 
 " const, static
-highlight! link StorageClass NeomoonflyCoral
+highlight! link StorageClass NfmCoral
 
 " void, intptr_t
 exec 'highlight Type ctermfg=' . s:emerald.term . ' guifg=' . s:emerald.hex . ' gui=none'
 
 " number literals
-highlight! link Constant NeomoonflyOrange
+highlight! link Constant NfmOrange
 
 " character constants
-highlight! link Character NeomoonflyPurple
+highlight! link Character NfmPurple
 
 " exceptions
-highlight! link Exception NeomoonflyCrimson
+highlight! link Exception NfmCrimson
 
 " ifdef/endif
-highlight! link PreProc NeomoonflyCranberry
+highlight! link PreProc NfmCranberry
 
 " case in switch statement
-highlight! link Label NeomoonflyTurquoise
+highlight! link Label NfmTurquoise
 
 " end-of-line '$', end-of-file '~'
 exec 'highlight NonText ctermfg=' . s:grey241.term . ' guifg=' . s:grey241.hex . ' gui=none'
 
 " sizeof
-highlight! link Operator NeomoonflyCranberry
+highlight! link Operator NfmCranberry
 
 " for, while
-highlight! link Repeat NeomoonflyViolet
+highlight! link Repeat NfmViolet
 
 " search
 exec 'highlight Search ctermbg=bg ctermfg=' . s:coral.term . ' cterm=reverse guibg=bg guifg=' . s:coral.hex . ' gui=reverse'
 exec 'highlight IncSearch ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
 
 " '\n' sequences
-highlight! link Special NeomoonflyCranberry
+highlight! link Special NfmCranberry
 
 " if, else
 exec 'highlight Statement ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex . ' gui=none'
 
 " struct, union, enum, typedef
-highlight! link Structure NeomoonflyBlue
+highlight! link Structure NfmBlue
 
 " Status, split and tab lines
 exec 'highlight StatusLine ctermbg=' . s:grey236.term . '  ctermfg=' . s:white.term . ' cterm=none guibg=' . s:grey236.hex . ' guifg=' . s:white.hex . ' gui=none'
@@ -282,14 +282,14 @@ exec 'highlight TablineSel ctermbg=' . s:grey236.term . ' ctermfg=' . s:blue.ter
 exec 'highlight TablineFill ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey236.term . ' cterm=none guibg=' . s:grey236.hex . ' guifg=' . s:grey236.hex . ' gui=none'
 exec 'highlight StatusLineTerm ctermbg=' . s:grey236.term . ' ctermfg=' . s:white.term . ' cterm=none guibg=' . s:grey236.hex . ' guifg=' . s:white.hex . ' gui=none'
 exec 'highlight StatusLineTermNC ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey247.term . ' cterm=none guibg=' . s:grey236.hex . ' guifg=' . s:grey247.hex . ' gui=none'
-if g:neomoonflyVertSplits
+if g:nfmVertSplits
     exec 'highlight VertSplit ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey236.term . ' cterm=none guibg=' . s:grey236.hex . ' guifg=' . s:grey236.hex . ' gui=none'
 else
     exec 'highlight VertSplit ctermbg=' . s:black.term . ' ctermfg=' . s:black.term . ' cterm=none guibg=' . s:black.hex . ' guifg=' . s:black.hex . ' gui=none'
 end
 
 " Visual selection
-highlight! link Visual NeomoonflyVisual
+highlight! link Visual NfmVisual
 exec 'highlight VisualNOS ctermbg=' . s:grey0.term . ' ctermfg=fg cterm=none guibg=' . s:grey0.hex . ' guifg=fg gui=none'
 exec 'highlight VisualInDiff ctermbg=' . s:grey0.term . ' ctermfg=' . s:white.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:white.hex
 
@@ -306,7 +306,7 @@ exec 'highlight PmenuThumb ctermbg=' . s:grey244.term . ' guibg=' . s:grey244.he
 exec 'highlight WildMenu ctermbg=' . s:spring.term . ' ctermfg=' . s:grey254.term . ' guibg=' . s:spring.hex . ' guifg=' . s:grey254.hex
 
 " Spelling errors
-if g:neomoonflyUndercurls
+if g:nfmUndercurls
     exec 'highlight SpellBad ctermbg=NONE ctermfg=' . s:red.term . ' cterm=underline guibg=NONE gui=undercurl guisp=' . s:red.hex
     exec 'highlight SpellCap ctermbg=NONE ctermfg=' . s:blue.term . ' cterm=underline guibg=NONE gui=undercurl guisp=' . s:blue.hex
     exec 'highlight SpellRare ctermbg=NONE ctermfg=' . s:yellow.term . ' cterm=underline guibg=NONE gui=undercurl guisp=' . s:yellow.hex
@@ -322,7 +322,7 @@ endif
 exec 'highlight Question ctermfg=' . s:lime.term . ' guifg=' . s:lime.hex . ' gui=none'
 exec 'highlight MoreMsg ctermfg=' . s:red.term . ' guifg=' . s:red.hex . ' gui=none'
 exec 'highlight LineNr ctermbg=bg ctermfg=' . s:grey241.term . ' guibg=bg guifg=' . s:grey241.hex . ' gui=none'
-if g:neomoonflyCursorColor
+if g:nfmCursorColor
     exec 'highlight Cursor ctermfg=bg ctermbg=' . s:blue.term . ' guifg=bg guibg=' . s:blue.hex
 else
     exec 'highlight Cursor ctermfg=bg ctermbg=' . s:grey247.term . ' guifg=bg guibg=' . s:grey247.hex
@@ -333,16 +333,16 @@ exec 'highlight FoldColumn ctermbg=' . s:grey236.term . ' ctermfg=' . s:lime.ter
 exec 'highlight SignColumn ctermbg=bg ctermfg=' . s:lime.term . ' guibg=bg guifg=' . s:lime.hex
 exec 'highlight Todo ctermbg=' . s:yellow.term . ' ctermfg=' . s:black.term . ' guibg=' . s:yellow.hex . ' guifg=' . s:black.hex
 exec 'highlight SpecialKey ctermbg=bg ctermfg=' . s:sky.term . ' guibg=bg guifg=' . s:sky.hex
-if g:neomoonflyUnderlineMatchParen
+if g:nfmUnderlineMatchParen
     exec 'highlight MatchParen ctermbg=bg cterm=underline guibg=bg gui=underline'
 else
-    highlight! link MatchParen NeomoonflyVisual
+    highlight! link MatchParen NfmVisual
 endif
 exec 'highlight Ignore ctermfg=' . s:sky.term . ' guifg=' . s:sky.hex
 exec 'highlight Underlined ctermfg=' . s:emerald.term . ' cterm=none guifg=' . s:emerald.hex . ' gui=none'
 exec 'highlight QuickFixLine ctermbg=' . s:grey237.term . ' cterm=none guibg=' . s:grey237.hex
-highlight! link Delimiter NeomoonflyWhite
-highlight! link qfFileName NeomoonflyEmerald
+highlight! link Delimiter NfmWhite
+highlight! link qfFileName NfmEmerald
 
 " Color column (after line 80)
 exec 'highlight ColorColumn ctermbg=' . s:grey233.term . ' guibg=' . s:grey233.hex
@@ -354,7 +354,7 @@ exec 'highlight Conceal ctermbg=NONE ctermfg=' . s:grey249.term . ' guibg=NONE g
 if has('nvim')
     exec 'highlight Whitespace ctermfg=' . s:grey235.term . ' guifg=' . s:grey235.hex
     exec 'highlight TermCursor ctermbg=' . s:grey247.term . ' ctermfg=bg cterm=none guibg=' . s:grey247.hex . ' guifg=bg gui=none'
-    if g:neomoonflyNormalFloat
+    if g:nfmNormalFloat
         exec 'highlight NormalFloat ctermbg=bg ctermfg=' . s:grey249.term . ' guibg=bg guifg=' . s:grey249.hex
     else
         exec 'highlight NormalFloat ctermbg=' . s:grey234.term . ' ctermfg=fg guibg=' . s:grey234.hex . ' guifg=fg'
@@ -362,166 +362,166 @@ if has('nvim')
     exec 'highlight FloatBorder ctermbg=bg ctermfg=' . s:grey236.term . ' guibg=bg guifg=' . s:grey236.hex
 
     " Neovim Treesitter
-    highlight! link TSAnnotation NeomoonflyViolet
-    highlight! link TSAttribute NeomoonflySky
-    highlight! link TSConstant NeomoonflyTurquoise
-    highlight! link TSConstBuiltin NeomoonflyGreen
-    highlight! link TSConstMacro NeomoonflyViolet
-    highlight! link TSConstructor NeomoonflyEmerald
-    highlight! link TSFuncBuiltin NeomoonflySky
-    highlight! link TSFuncMacro NeomoonflySky
-    highlight! link TSInclude NeomoonflyCranberry
-    highlight! link TSKeywordOperator NeomoonflyViolet
-    highlight! link TSNamespace NeomoonflyBlue
-    highlight! link TSParameter NeomoonflyWhite
-    highlight! link TSPunctSpecial NeomoonflyCranberry
-    highlight! link TSSymbol NeomoonflyPurple
-    highlight! link TSTag NeomoonflyBlue
-    highlight! link TSTagDelimiter NeomoonflyLime
-    highlight! link TSVariableBuiltin NeomoonflyLime
-    highlight! link bashTSParameter NeomoonflyTurquoise
-    highlight! link cssTSPunctDelimiter NeomoonflyCranberry
-    highlight! link cssTSType NeomoonflyBlue
-    highlight! link scssTSPunctDelimiter NeomoonflyCranberry
-    highlight! link scssTSType NeomoonflyBlue
-    highlight! link scssTSVariable NeomoonflyTurquoise
-    highlight! link yamlTSField NeomoonflySky
-    highlight! link yamlTSPunctDelimiter NeomoonflyCranberry
+    highlight! link TSAnnotation NfmViolet
+    highlight! link TSAttribute NfmSky
+    highlight! link TSConstant NfmTurquoise
+    highlight! link TSConstBuiltin NfmGreen
+    highlight! link TSConstMacro NfmViolet
+    highlight! link TSConstructor NfmEmerald
+    highlight! link TSFuncBuiltin NfmSky
+    highlight! link TSFuncMacro NfmSky
+    highlight! link TSInclude NfmCranberry
+    highlight! link TSKeywordOperator NfmViolet
+    highlight! link TSNamespace NfmBlue
+    highlight! link TSParameter NfmWhite
+    highlight! link TSPunctSpecial NfmCranberry
+    highlight! link TSSymbol NfmPurple
+    highlight! link TSTag NfmBlue
+    highlight! link TSTagDelimiter NfmLime
+    highlight! link TSVariableBuiltin NfmLime
+    highlight! link bashTSParameter NfmTurquoise
+    highlight! link cssTSPunctDelimiter NfmCranberry
+    highlight! link cssTSType NfmBlue
+    highlight! link scssTSPunctDelimiter NfmCranberry
+    highlight! link scssTSType NfmBlue
+    highlight! link scssTSVariable NfmTurquoise
+    highlight! link yamlTSField NfmSky
+    highlight! link yamlTSPunctDelimiter NfmCranberry
 endif
 
 " C/C++
-highlight! link cDefine NeomoonflyViolet
-highlight! link cPreCondit NeomoonflyViolet
-highlight! link cStatement NeomoonflyViolet
-highlight! link cStructure NeomoonflyCoral
-highlight! link cppAccess NeomoonflyLime
-highlight! link cppCast NeomoonflyTurquoise
-highlight! link cppCustomClass NeomoonflyTurquoise
-highlight! link cppExceptions NeomoonflyLime
-highlight! link cppModifier NeomoonflyViolet
-highlight! link cppOperator NeomoonflyGreen
-highlight! link cppStatement NeomoonflyTurquoise
-highlight! link cppSTLconstant NeomoonflyBlue
-highlight! link cppSTLnamespace NeomoonflyBlue
-highlight! link cppStructure NeomoonflyViolet
+highlight! link cDefine NfmViolet
+highlight! link cPreCondit NfmViolet
+highlight! link cStatement NfmViolet
+highlight! link cStructure NfmCoral
+highlight! link cppAccess NfmLime
+highlight! link cppCast NfmTurquoise
+highlight! link cppCustomClass NfmTurquoise
+highlight! link cppExceptions NfmLime
+highlight! link cppModifier NfmViolet
+highlight! link cppOperator NfmGreen
+highlight! link cppStatement NfmTurquoise
+highlight! link cppSTLconstant NfmBlue
+highlight! link cppSTLnamespace NfmBlue
+highlight! link cppStructure NfmViolet
 
 " C#
-highlight! link csModifier NeomoonflyLime
-highlight! link csPrecondit NeomoonflyViolet
-highlight! link csStorage NeomoonflyViolet
-highlight! link csXmlTag NeomoonflyBlue
+highlight! link csModifier NfmLime
+highlight! link csPrecondit NfmViolet
+highlight! link csStorage NfmViolet
+highlight! link csXmlTag NfmBlue
 
 " Clojure
-highlight! link clojureDefine NeomoonflyViolet
-highlight! link clojureKeyword NeomoonflyPurple
-highlight! link clojureMacro NeomoonflyOrange
-highlight! link clojureParen NeomoonflyBlue
-highlight! link clojureSpecial NeomoonflySky
+highlight! link clojureDefine NfmViolet
+highlight! link clojureKeyword NfmPurple
+highlight! link clojureMacro NfmOrange
+highlight! link clojureParen NfmBlue
+highlight! link clojureSpecial NfmSky
 
 " CoffeeScript
-highlight! link coffeeConstant NeomoonflyEmerald
-highlight! link coffeeGlobal NeomoonflyTurquoise
-highlight! link coffeeKeyword NeomoonflyOrange
-highlight! link coffeeObjAssign NeomoonflySky
-highlight! link coffeeSpecialIdent NeomoonflyLime
-highlight! link coffeeSpecialVar NeomoonflyBlue
-highlight! link coffeeStatement NeomoonflyCoral
+highlight! link coffeeConstant NfmEmerald
+highlight! link coffeeGlobal NfmTurquoise
+highlight! link coffeeKeyword NfmOrange
+highlight! link coffeeObjAssign NfmSky
+highlight! link coffeeSpecialIdent NfmLime
+highlight! link coffeeSpecialVar NfmBlue
+highlight! link coffeeStatement NfmCoral
 
 " Crystal
-highlight! link crystalAccess NeomoonflyYellow
-highlight! link crystalAttribute NeomoonflySky
-highlight! link crystalBlockParameter NeomoonflyGreen
-highlight! link crystalClass NeomoonflyOrange
-highlight! link crystalDefine NeomoonflyViolet
-highlight! link crystalExceptional NeomoonflyCoral
-highlight! link crystalInstanceVariable NeomoonflyLime
-highlight! link crystalModule NeomoonflyBlue
-highlight! link crystalPseudoVariable NeomoonflyGreen
-highlight! link crystalSharpBang NeomoonflyGrey247
-highlight! link crystalStringDelimiter NeomoonflyKhaki
-highlight! link crystalSymbol NeomoonflyPurple
+highlight! link crystalAccess NfmYellow
+highlight! link crystalAttribute NfmSky
+highlight! link crystalBlockParameter NfmGreen
+highlight! link crystalClass NfmOrange
+highlight! link crystalDefine NfmViolet
+highlight! link crystalExceptional NfmCoral
+highlight! link crystalInstanceVariable NfmLime
+highlight! link crystalModule NfmBlue
+highlight! link crystalPseudoVariable NfmGreen
+highlight! link crystalSharpBang NfmGrey247
+highlight! link crystalStringDelimiter NfmKhaki
+highlight! link crystalSymbol NfmPurple
 
 " CSS/SCSS
-highlight! link cssAtRule NeomoonflyViolet
-highlight! link cssAttr NeomoonflyTurquoise
-highlight! link cssBraces NeomoonflyReset
-highlight! link cssClassName NeomoonflyEmerald
-highlight! link cssClassNameDot NeomoonflyViolet
-highlight! link cssColor NeomoonflyTurquoise
-highlight! link cssIdentifier NeomoonflySky
-highlight! link cssProp NeomoonflyTurquoise
-highlight! link cssTagName NeomoonflyBlue
-highlight! link cssUnitDecorators NeomoonflyKhaki
-highlight! link cssValueLength NeomoonflyPurple
-highlight! link cssValueNumber NeomoonflyPurple
-highlight! link sassId NeomoonflyBlue
-highlight! link sassIdChar NeomoonflyViolet
-highlight! link sassMedia NeomoonflyViolet
-highlight! link scssSelectorName NeomoonflyBlue
+highlight! link cssAtRule NfmViolet
+highlight! link cssAttr NfmTurquoise
+highlight! link cssBraces NfmReset
+highlight! link cssClassName NfmEmerald
+highlight! link cssClassNameDot NfmViolet
+highlight! link cssColor NfmTurquoise
+highlight! link cssIdentifier NfmSky
+highlight! link cssProp NfmTurquoise
+highlight! link cssTagName NfmBlue
+highlight! link cssUnitDecorators NfmKhaki
+highlight! link cssValueLength NfmPurple
+highlight! link cssValueNumber NfmPurple
+highlight! link sassId NfmBlue
+highlight! link sassIdChar NfmViolet
+highlight! link sassMedia NfmViolet
+highlight! link scssSelectorName NfmBlue
 
 " Dart
-highlight! link dartMetadata NeomoonflyLime
-highlight! link dartStorageClass NeomoonflyViolet
-highlight! link dartTypedef NeomoonflyViolet
+highlight! link dartMetadata NfmLime
+highlight! link dartStorageClass NfmViolet
+highlight! link dartTypedef NfmViolet
 
 " Elixir
-highlight! link eelixirDelimiter NeomoonflyCrimson
-highlight! link elixirAtom NeomoonflyPurple
-highlight! link elixirBlockDefinition NeomoonflyViolet
-highlight! link elixirDefine NeomoonflyViolet
-highlight! link elixirDocTest NeomoonflyGrey247
-highlight! link elixirExUnitAssert NeomoonflyLime
-highlight! link elixirExUnitMacro NeomoonflySky
-highlight! link elixirKernelFunction NeomoonflyGreen
-highlight! link elixirKeyword NeomoonflyOrange
-highlight! link elixirModuleDefine NeomoonflyBlue
-highlight! link elixirPrivateDefine NeomoonflyViolet
-highlight! link elixirStringDelimiter NeomoonflyKhaki
-highlight! link elixirVariable NeomoonflyTurquoise
+highlight! link eelixirDelimiter NfmCrimson
+highlight! link elixirAtom NfmPurple
+highlight! link elixirBlockDefinition NfmViolet
+highlight! link elixirDefine NfmViolet
+highlight! link elixirDocTest NfmGrey247
+highlight! link elixirExUnitAssert NfmLime
+highlight! link elixirExUnitMacro NfmSky
+highlight! link elixirKernelFunction NfmGreen
+highlight! link elixirKeyword NfmOrange
+highlight! link elixirModuleDefine NfmBlue
+highlight! link elixirPrivateDefine NfmViolet
+highlight! link elixirStringDelimiter NfmKhaki
+highlight! link elixirVariable NfmTurquoise
 
 " Elm
-highlight! link elmLetBlockDefinition NeomoonflyLime
-highlight! link elmTopLevelDecl NeomoonflyCoral
-highlight! link elmType NeomoonflySky
+highlight! link elmLetBlockDefinition NfmLime
+highlight! link elmTopLevelDecl NfmCoral
+highlight! link elmType NfmSky
 
 " Go
-highlight! link goBuiltins NeomoonflySky
-highlight! link goConditional NeomoonflyViolet
-highlight! link goDeclType NeomoonflyGreen
-highlight! link goDirective NeomoonflyCranberry
-highlight! link goFloats NeomoonflyPurple
-highlight! link goFunction NeomoonflyBlue
-highlight! link goFunctionCall NeomoonflySky
-highlight! link goImport NeomoonflyCranberry
-highlight! link goLabel NeomoonflyYellow
-highlight! link goMethod NeomoonflySky
-highlight! link goMethodCall NeomoonflySky
-highlight! link goPackage NeomoonflyViolet
-highlight! link goSignedInts NeomoonflyEmerald
-highlight! link goStruct NeomoonflyCoral
-highlight! link goStructDef NeomoonflyCoral
-highlight! link goUnsignedInts NeomoonflyPurple
+highlight! link goBuiltins NfmSky
+highlight! link goConditional NfmViolet
+highlight! link goDeclType NfmGreen
+highlight! link goDirective NfmCranberry
+highlight! link goFloats NfmPurple
+highlight! link goFunction NfmBlue
+highlight! link goFunctionCall NfmSky
+highlight! link goImport NfmCranberry
+highlight! link goLabel NfmYellow
+highlight! link goMethod NfmSky
+highlight! link goMethodCall NfmSky
+highlight! link goPackage NfmViolet
+highlight! link goSignedInts NfmEmerald
+highlight! link goStruct NfmCoral
+highlight! link goStructDef NfmCoral
+highlight! link goUnsignedInts NfmPurple
 
 " Haskell
-highlight! link haskellDecl NeomoonflyOrange
-highlight! link haskellDeclKeyword NeomoonflyOrange
-highlight! link haskellIdentifier NeomoonflyTurquoise
-highlight! link haskellLet NeomoonflySky
-highlight! link haskellOperators NeomoonflyCranberry
-highlight! link haskellType NeomoonflySky
-highlight! link haskellWhere NeomoonflyViolet
+highlight! link haskellDecl NfmOrange
+highlight! link haskellDeclKeyword NfmOrange
+highlight! link haskellIdentifier NfmTurquoise
+highlight! link haskellLet NfmSky
+highlight! link haskellOperators NfmCranberry
+highlight! link haskellType NfmSky
+highlight! link haskellWhere NfmViolet
 
 " HTML
-highlight! link htmlArg NeomoonflyTurquoise
-highlight! link htmlLink NeomoonflyGreen
-highlight! link htmlH1 NeomoonflyCranberry
-highlight! link htmlH2 NeomoonflyOrange
-highlight! link htmlEndTag NeomoonflyPurple
-highlight! link htmlTag NeomoonflyLime
-highlight! link htmlTagN NeomoonflyBlue
-highlight! link htmlTagName NeomoonflyBlue
-highlight! link htmlUnderline NeomoonflyWhite
-if g:neomoonflyItalics
+highlight! link htmlArg NfmTurquoise
+highlight! link htmlLink NfmGreen
+highlight! link htmlH1 NfmCranberry
+highlight! link htmlH2 NfmOrange
+highlight! link htmlEndTag NfmPurple
+highlight! link htmlTag NfmLime
+highlight! link htmlTagN NfmBlue
+highlight! link htmlTagName NfmBlue
+highlight! link htmlUnderline NfmWhite
+if g:nfmItalics
     exec 'highlight htmlBoldItalic ctermbg=' . s:black.term . ' ctermfg=' . s:coral.term . ' guibg=' . s:black.hex . ' guifg=' . s:coral.hex . ' gui=italic'
     exec 'highlight htmlBoldUnderlineItalic ctermbg=' . s:black.term . ' ctermfg=' . s:coral.term . ' guibg=' . s:black.hex . ' guifg=' . s:coral.hex . ' gui=italic'
     exec 'highlight htmlItalic ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex . ' gui=italic'
@@ -534,134 +534,134 @@ else
 endif
 
 " Java
-highlight! link javaAnnotation NeomoonflyLime
-highlight! link javaBraces NeomoonflyWhite
-highlight! link javaClassDecl NeomoonflyYellow
-highlight! link javaCommentTitle NeomoonflyGrey247
-highlight! link javaConstant NeomoonflySky
-highlight! link javaDebug NeomoonflySky
-highlight! link javaMethodDecl NeomoonflyYellow
-highlight! link javaOperator NeomoonflyCrimson
-highlight! link javaScopeDecl NeomoonflyViolet
-highlight! link javaStatement NeomoonflyTurquoise
+highlight! link javaAnnotation NfmLime
+highlight! link javaBraces NfmWhite
+highlight! link javaClassDecl NfmYellow
+highlight! link javaCommentTitle NfmGrey247
+highlight! link javaConstant NfmSky
+highlight! link javaDebug NfmSky
+highlight! link javaMethodDecl NfmYellow
+highlight! link javaOperator NfmCrimson
+highlight! link javaScopeDecl NfmViolet
+highlight! link javaStatement NfmTurquoise
 
 " JavaScript, 'pangloss/vim-javascript' plugin
-highlight! link jsClassDefinition NeomoonflyEmerald
-highlight! link jsClassKeyword NeomoonflyOrange
-highlight! link jsFrom NeomoonflyCoral
-highlight! link jsFuncBlock NeomoonflyTurquoise
-highlight! link jsFuncCall NeomoonflySky
-highlight! link jsFunction NeomoonflyLime
-highlight! link jsGlobalObjects NeomoonflyEmerald
-highlight! link jsModuleAs NeomoonflyCoral
-highlight! link jsObjectKey NeomoonflySky
-highlight! link jsObjectValue NeomoonflyEmerald
-highlight! link jsOperator NeomoonflyViolet
-highlight! link jsStorageClass NeomoonflyLime
-highlight! link jsTemplateBraces NeomoonflyCranberry
-highlight! link jsTemplateExpression NeomoonflyTurquoise
-highlight! link jsThis NeomoonflyGreen
+highlight! link jsClassDefinition NfmEmerald
+highlight! link jsClassKeyword NfmOrange
+highlight! link jsFrom NfmCoral
+highlight! link jsFuncBlock NfmTurquoise
+highlight! link jsFuncCall NfmSky
+highlight! link jsFunction NfmLime
+highlight! link jsGlobalObjects NfmEmerald
+highlight! link jsModuleAs NfmCoral
+highlight! link jsObjectKey NfmSky
+highlight! link jsObjectValue NfmEmerald
+highlight! link jsOperator NfmViolet
+highlight! link jsStorageClass NfmLime
+highlight! link jsTemplateBraces NfmCranberry
+highlight! link jsTemplateExpression NfmTurquoise
+highlight! link jsThis NfmGreen
 
 " JSX, 'MaxMEllon/vim-jsx-pretty' plugin
-highlight! link jsxAttrib NeomoonflyLime
-highlight! link jsxClosePunct NeomoonflyPurple
-highlight! link jsxComponentName NeomoonflyBlue
-highlight! link jsxOpenPunct NeomoonflyLime
-highlight! link jsxTagName NeomoonflyBlue
+highlight! link jsxAttrib NfmLime
+highlight! link jsxClosePunct NfmPurple
+highlight! link jsxComponentName NfmBlue
+highlight! link jsxOpenPunct NfmLime
+highlight! link jsxTagName NfmBlue
 
 " Lua
-highlight! link luaBraces NeomoonflyCranberry
-highlight! link luaBuiltin NeomoonflyGreen
-highlight! link luaFuncCall NeomoonflySky
-highlight! link luaSpecialTable NeomoonflySky
+highlight! link luaBraces NfmCranberry
+highlight! link luaBuiltin NfmGreen
+highlight! link luaFuncCall NfmSky
+highlight! link luaSpecialTable NfmSky
 
 " Markdown, 'tpope/vim-markdown' plugin
-highlight! link markdownBold NeomoonflyYellow
-highlight! link markdownCode NeomoonflyKhaki
-highlight! link markdownCodeDelimiter NeomoonflyKhaki
+highlight! link markdownBold NfmYellow
+highlight! link markdownCode NfmKhaki
+highlight! link markdownCodeDelimiter NfmKhaki
 highlight! link markdownError NormalNC
-highlight! link markdownH1 NeomoonflyOrange
-highlight! link markdownHeadingRule NeomoonflyBlue
-highlight! link markdownItalic NeomoonflyViolet
-highlight! link markdownUrl NeomoonflyPurple
+highlight! link markdownH1 NfmOrange
+highlight! link markdownHeadingRule NfmBlue
+highlight! link markdownItalic NfmViolet
+highlight! link markdownUrl NfmPurple
 
 " Markdown, 'plasticboy/vim-markdown' plugin
-highlight! link mkdDelimiter NeomoonflyWhite
+highlight! link mkdDelimiter NfmWhite
 highlight! link mkdLineBreak NormalNC
-highlight! link mkdListItem NeomoonflyBlue
-highlight! link mkdURL NeomoonflyPurple
+highlight! link mkdListItem NfmBlue
+highlight! link mkdURL NfmPurple
 
 " PHP
-highlight! link phpClass NeomoonflyEmerald
-highlight! link phpClasses NeomoonflyBlue
-highlight! link phpFunction NeomoonflySky
-highlight! link phpParent NeomoonflyReset
-highlight! link phpType NeomoonflyViolet
+highlight! link phpClass NfmEmerald
+highlight! link phpClasses NfmBlue
+highlight! link phpFunction NfmSky
+highlight! link phpParent NfmReset
+highlight! link phpType NfmViolet
 
 " PureScript
-highlight! link purescriptClass NeomoonflyOrange
-highlight! link purescriptModuleParams NeomoonflyCoral
+highlight! link purescriptClass NfmOrange
+highlight! link purescriptModuleParams NfmCoral
 
 " Python
-highlight! link pythonBuiltin NeomoonflyBlue
-highlight! link pythonClassVar NeomoonflyGreen
-highlight! link pythonCoding NeomoonflySky
-highlight! link pythonImport NeomoonflyCranberry
-highlight! link pythonOperator NeomoonflyViolet
-highlight! link pythonRun NeomoonflySky
-highlight! link pythonStatement NeomoonflyViolet
+highlight! link pythonBuiltin NfmBlue
+highlight! link pythonClassVar NfmGreen
+highlight! link pythonCoding NfmSky
+highlight! link pythonImport NfmCranberry
+highlight! link pythonOperator NfmViolet
+highlight! link pythonRun NfmSky
+highlight! link pythonStatement NfmViolet
 
 " Ruby
-highlight! link erubyDelimiter NeomoonflyCrimson
-highlight! link rubyAccess NeomoonflyYellow
-highlight! link rubyAssertion NeomoonflySky
-highlight! link rubyAttribute NeomoonflySky
-highlight! link rubyBlockParameter NeomoonflyGreen
-highlight! link rubyCallback NeomoonflySky
-highlight! link rubyDefine NeomoonflyViolet
-highlight! link rubyEntities NeomoonflySky
-highlight! link rubyExceptional NeomoonflyCoral
-highlight! link rubyGemfileMethod NeomoonflySky
-highlight! link rubyInstanceVariable NeomoonflyTurquoise
-highlight! link rubyInterpolationDelimiter NeomoonflyCranberry
-highlight! link rubyMacro NeomoonflySky
-highlight! link rubyModule NeomoonflyBlue
-highlight! link rubyPseudoVariable NeomoonflyGreen
-highlight! link rubyResponse NeomoonflySky
-highlight! link rubyRoute NeomoonflySky
-highlight! link rubySharpBang NeomoonflyGrey247
-highlight! link rubyStringDelimiter NeomoonflyKhaki
-highlight! link rubySymbol NeomoonflyPurple
+highlight! link erubyDelimiter NfmCrimson
+highlight! link rubyAccess NfmYellow
+highlight! link rubyAssertion NfmSky
+highlight! link rubyAttribute NfmSky
+highlight! link rubyBlockParameter NfmGreen
+highlight! link rubyCallback NfmSky
+highlight! link rubyDefine NfmViolet
+highlight! link rubyEntities NfmSky
+highlight! link rubyExceptional NfmCoral
+highlight! link rubyGemfileMethod NfmSky
+highlight! link rubyInstanceVariable NfmTurquoise
+highlight! link rubyInterpolationDelimiter NfmCranberry
+highlight! link rubyMacro NfmSky
+highlight! link rubyModule NfmBlue
+highlight! link rubyPseudoVariable NfmGreen
+highlight! link rubyResponse NfmSky
+highlight! link rubyRoute NfmSky
+highlight! link rubySharpBang NfmGrey247
+highlight! link rubyStringDelimiter NfmKhaki
+highlight! link rubySymbol NfmPurple
 
 " Rust
-highlight! link rustAssert NeomoonflyGreen
-highlight! link rustAttribute NeomoonflyReset
-highlight! link rustCharacterInvalid NeomoonflyCranberry
-highlight! link rustCharacterInvalidUnicode NeomoonflyCranberry
-highlight! link rustCommentBlockDoc NeomoonflyGrey247
-highlight! link rustCommentBlockDocError NeomoonflyGrey247
-highlight! link rustCommentLineDoc NeomoonflyGrey247
-highlight! link rustCommentLineDocError NeomoonflyGrey247
-highlight! link rustConstant NeomoonflyOrange
-highlight! link rustDerive NeomoonflyGreen
-highlight! link rustEscapeError NeomoonflyCranberry
-highlight! link rustFuncName NeomoonflyBlue
-highlight! link rustIdentifier NeomoonflyBlue
-highlight! link rustInvalidBareKeyword NeomoonflyCranberry
-highlight! link rustKeyword NeomoonflyViolet
-highlight! link rustLifetime NeomoonflyViolet
-highlight! link rustMacro NeomoonflyGreen
-highlight! link rustMacroVariable NeomoonflyViolet
-highlight! link rustModPath NeomoonflyBlue
-highlight! link rustObsoleteExternMod NeomoonflyCranberry
-highlight! link rustObsoleteStorage NeomoonflyCranberry
-highlight! link rustReservedKeyword NeomoonflyCranberry
-highlight! link rustSelf NeomoonflyTurquoise
-highlight! link rustSigil NeomoonflyTurquoise
-highlight! link rustStorage NeomoonflyViolet
-highlight! link rustStructure NeomoonflyViolet
-highlight! link rustTrait NeomoonflyEmerald
-highlight! link rustType NeomoonflyEmerald
+highlight! link rustAssert NfmGreen
+highlight! link rustAttribute NfmReset
+highlight! link rustCharacterInvalid NfmCranberry
+highlight! link rustCharacterInvalidUnicode NfmCranberry
+highlight! link rustCommentBlockDoc NfmGrey247
+highlight! link rustCommentBlockDocError NfmGrey247
+highlight! link rustCommentLineDoc NfmGrey247
+highlight! link rustCommentLineDocError NfmGrey247
+highlight! link rustConstant NfmOrange
+highlight! link rustDerive NfmGreen
+highlight! link rustEscapeError NfmCranberry
+highlight! link rustFuncName NfmBlue
+highlight! link rustIdentifier NfmBlue
+highlight! link rustInvalidBareKeyword NfmCranberry
+highlight! link rustKeyword NfmViolet
+highlight! link rustLifetime NfmViolet
+highlight! link rustMacro NfmGreen
+highlight! link rustMacroVariable NfmViolet
+highlight! link rustModPath NfmBlue
+highlight! link rustObsoleteExternMod NfmCranberry
+highlight! link rustObsoleteStorage NfmCranberry
+highlight! link rustReservedKeyword NfmCranberry
+highlight! link rustSelf NfmTurquoise
+highlight! link rustSigil NfmTurquoise
+highlight! link rustStorage NfmViolet
+highlight! link rustStructure NfmViolet
+highlight! link rustTrait NfmEmerald
+highlight! link rustType NfmEmerald
 
 " Scala (note, link highlighting does not work, I don't know why)
 exec 'highlight scalaCapitalWord ctermfg=' . s:blue.term . ' guifg=' . s:blue.hex
@@ -671,158 +671,158 @@ exec 'highlight scalaKeywordModifier ctermfg=' . s:lime.term . ' guifg=' . s:lim
 exec 'highlight scalaSpecial ctermfg=' . s:crimson.term . ' guifg=' . s:crimson.hex
 
 " Shell scripts
-highlight! link shAlias NeomoonflyTurquoise
-highlight! link shCommandSub NeomoonflyReset
-highlight! link shLoop NeomoonflyViolet
-highlight! link shSetList NeomoonflyTurquoise
-highlight! link shShellVariables NeomoonflyLime
-highlight! link shVariable NeomoonflyTurquoise
+highlight! link shAlias NfmTurquoise
+highlight! link shCommandSub NfmReset
+highlight! link shLoop NfmViolet
+highlight! link shSetList NfmTurquoise
+highlight! link shShellVariables NfmLime
+highlight! link shVariable NfmTurquoise
 
 " TypeScript (leafgarland/typescript-vim)
-highlight! link typescriptDOMObjects NeomoonflyBlue
-highlight! link typescriptFuncComma NeomoonflyWhite
-highlight! link typescriptFuncKeyword NeomoonflyLime
-highlight! link typescriptGlobalObjects NeomoonflyBlue
-highlight! link typescriptIdentifier NeomoonflyGreen
-highlight! link typescriptNull NeomoonflyGreen
-highlight! link typescriptOpSymbols NeomoonflyViolet
-highlight! link typescriptOperator NeomoonflyCrimson
-highlight! link typescriptParens NeomoonflyWhite
-highlight! link typescriptReserved NeomoonflyViolet
-highlight! link typescriptStorageClass NeomoonflyLime
+highlight! link typescriptDOMObjects NfmBlue
+highlight! link typescriptFuncComma NfmWhite
+highlight! link typescriptFuncKeyword NfmLime
+highlight! link typescriptGlobalObjects NfmBlue
+highlight! link typescriptIdentifier NfmGreen
+highlight! link typescriptNull NfmGreen
+highlight! link typescriptOpSymbols NfmViolet
+highlight! link typescriptOperator NfmCrimson
+highlight! link typescriptParens NfmWhite
+highlight! link typescriptReserved NfmViolet
+highlight! link typescriptStorageClass NfmLime
 
 " TypeScript (HerringtonDarkholme/yats.vim)
-highlight! link typeScriptModule NeomoonflyBlue
-highlight! link typescriptAbstract NeomoonflyCoral
-highlight! link typescriptArrayMethod NeomoonflySky
-highlight! link typescriptArrowFuncArg NeomoonflyWhite
-highlight! link typescriptBOM NeomoonflyEmerald
-highlight! link typescriptBOMHistoryMethod NeomoonflySky
-highlight! link typescriptBOMLocationMethod NeomoonflySky
-highlight! link typescriptBOMWindowProp NeomoonflyGreen
-highlight! link typescriptBraces NeomoonflyWhite
-highlight! link typescriptCall NeomoonflyWhite
-highlight! link typescriptClassHeritage NeomoonflyEmerald
-highlight! link typescriptClassKeyword NeomoonflyOrange
-highlight! link typescriptClassName NeomoonflyEmerald
-highlight! link typescriptDecorator NeomoonflyLime
-highlight! link typescriptDOMDocMethod NeomoonflySky
-highlight! link typescriptDOMEventTargetMethod NeomoonflySky
-highlight! link typescriptDOMNodeMethod NeomoonflySky
-highlight! link typescriptExceptions NeomoonflyCrimson
-highlight! link typescriptFuncType NeomoonflyWhite
-highlight! link typescriptMathStaticMethod NeomoonflySky
-highlight! link typescriptMethodAccessor NeomoonflyViolet
-highlight! link typescriptObjectLabel NeomoonflySky
-highlight! link typescriptParamImpl NeomoonflyWhite
-highlight! link typescriptStringMethod NeomoonflySky
-highlight! link typescriptTry NeomoonflyCrimson
-highlight! link typescriptVariable NeomoonflyLime
-highlight! link typescriptXHRMethod NeomoonflySky
+highlight! link typeScriptModule NfmBlue
+highlight! link typescriptAbstract NfmCoral
+highlight! link typescriptArrayMethod NfmSky
+highlight! link typescriptArrowFuncArg NfmWhite
+highlight! link typescriptBOM NfmEmerald
+highlight! link typescriptBOMHistoryMethod NfmSky
+highlight! link typescriptBOMLocationMethod NfmSky
+highlight! link typescriptBOMWindowProp NfmGreen
+highlight! link typescriptBraces NfmWhite
+highlight! link typescriptCall NfmWhite
+highlight! link typescriptClassHeritage NfmEmerald
+highlight! link typescriptClassKeyword NfmOrange
+highlight! link typescriptClassName NfmEmerald
+highlight! link typescriptDecorator NfmLime
+highlight! link typescriptDOMDocMethod NfmSky
+highlight! link typescriptDOMEventTargetMethod NfmSky
+highlight! link typescriptDOMNodeMethod NfmSky
+highlight! link typescriptExceptions NfmCrimson
+highlight! link typescriptFuncType NfmWhite
+highlight! link typescriptMathStaticMethod NfmSky
+highlight! link typescriptMethodAccessor NfmViolet
+highlight! link typescriptObjectLabel NfmSky
+highlight! link typescriptParamImpl NfmWhite
+highlight! link typescriptStringMethod NfmSky
+highlight! link typescriptTry NfmCrimson
+highlight! link typescriptVariable NfmLime
+highlight! link typescriptXHRMethod NfmSky
 
 " Vimscript
-highlight! link vimBracket NeomoonflySky
-highlight! link vimCommand NeomoonflyViolet
-highlight! link vimCommentTitle NeomoonflyViolet
-highlight! link vimEnvvar NeomoonflyCrimson
-highlight! link vimFuncName NeomoonflySky
-highlight! link vimFuncSID NeomoonflySky
-highlight! link vimFunction NeomoonflySky
-highlight! link vimHighlight NeomoonflySky
-highlight! link vimNotFunc NeomoonflyViolet
-highlight! link vimNotation NeomoonflySky
-highlight! link vimOption NeomoonflyTurquoise
-highlight! link vimParenSep NeomoonflyWhite
-highlight! link vimSep NeomoonflyWhite
-highlight! link vimUserFunc NeomoonflySky
+highlight! link vimBracket NfmSky
+highlight! link vimCommand NfmViolet
+highlight! link vimCommentTitle NfmViolet
+highlight! link vimEnvvar NfmCrimson
+highlight! link vimFuncName NfmSky
+highlight! link vimFuncSID NfmSky
+highlight! link vimFunction NfmSky
+highlight! link vimHighlight NfmSky
+highlight! link vimNotFunc NfmViolet
+highlight! link vimNotation NfmSky
+highlight! link vimOption NfmTurquoise
+highlight! link vimParenSep NfmWhite
+highlight! link vimSep NfmWhite
+highlight! link vimUserFunc NfmSky
 
 " XML
-highlight! link xmlAttrib NeomoonflyLime
-highlight! link xmlEndTag NeomoonflyBlue
-highlight! link xmlTag NeomoonflyLime
-highlight! link xmlTagName NeomoonflyBlue
+highlight! link xmlAttrib NfmLime
+highlight! link xmlEndTag NfmBlue
+highlight! link xmlTag NfmLime
+highlight! link xmlTagName NfmBlue
 
 " Git commits
-highlight! link gitCommitBranch NeomoonflySky
-highlight! link gitCommitDiscardedFile NeomoonflyCrimson
-highlight! link gitCommitDiscardedType NeomoonflySky
-highlight! link gitCommitHeader NeomoonflyPurple
-highlight! link gitCommitSelectedFile NeomoonflyEmerald
-highlight! link gitCommitSelectedType NeomoonflySky
-highlight! link gitCommitUntrackedFile NeomoonflyCranberry
-highlight! link gitEmail NeomoonflyBlue
+highlight! link gitCommitBranch NfmSky
+highlight! link gitCommitDiscardedFile NfmCrimson
+highlight! link gitCommitDiscardedType NfmSky
+highlight! link gitCommitHeader NfmPurple
+highlight! link gitCommitSelectedFile NfmEmerald
+highlight! link gitCommitSelectedType NfmSky
+highlight! link gitCommitUntrackedFile NfmCranberry
+highlight! link gitEmail NfmBlue
 
 " Git commit diffs
-highlight! link diffAdded NeomoonflyGreen
-highlight! link diffChanged NeomoonflyCrimson
-highlight! link diffIndexLine NeomoonflyCrimson
-highlight! link diffLine NeomoonflySky
-highlight! link diffRemoved NeomoonflyRed
-highlight! link diffSubname NeomoonflySky
+highlight! link diffAdded NfmGreen
+highlight! link diffChanged NfmCrimson
+highlight! link diffIndexLine NfmCrimson
+highlight! link diffLine NfmSky
+highlight! link diffRemoved NfmRed
+highlight! link diffSubname NfmSky
 
 " Tagbar plugin
-highlight! link TagbarFoldIcon NeomoonflyGrey247
-highlight! link TagbarVisibilityPublic NeomoonflyLime
-highlight! link TagbarVisibilityProtected NeomoonflyLime
-highlight! link TagbarVisibilityPrivate NeomoonflyLime
-highlight! link TagbarKind NeomoonflyEmerald
+highlight! link TagbarFoldIcon NfmGrey247
+highlight! link TagbarVisibilityPublic NfmLime
+highlight! link TagbarVisibilityProtected NfmLime
+highlight! link TagbarVisibilityPrivate NfmLime
+highlight! link TagbarKind NfmEmerald
 
 " NERDTree plugin
-highlight! link NERDTreeClosable NeomoonflyEmerald
-highlight! link NERDTreeCWD NeomoonflyPurple
-highlight! link NERDTreeDir NeomoonflySky
-highlight! link NERDTreeDirSlash NeomoonflyCranberry
-highlight! link NERDTreeExecFile NeomoonflyKhaki
-highlight! link NERDTreeFile NeomoonflyWhite
-highlight! link NERDTreeHelp NeomoonflyGrey247
-highlight! link NERDTreeLinkDir NeomoonflyBlue
-highlight! link NERDTreeLinkFile NeomoonflyBlue
-highlight! link NERDTreeLinkTarget NeomoonflyTurquoise
-highlight! link NERDTreeOpenable NeomoonflyEmerald
-highlight! link NERDTreePart NeomoonflyGrey0
-highlight! link NERDTreePartFile NeomoonflyGrey0
-highlight! link NERDTreeUp NeomoonflyBlue
+highlight! link NERDTreeClosable NfmEmerald
+highlight! link NERDTreeCWD NfmPurple
+highlight! link NERDTreeDir NfmSky
+highlight! link NERDTreeDirSlash NfmCranberry
+highlight! link NERDTreeExecFile NfmKhaki
+highlight! link NERDTreeFile NfmWhite
+highlight! link NERDTreeHelp NfmGrey247
+highlight! link NERDTreeLinkDir NfmBlue
+highlight! link NERDTreeLinkFile NfmBlue
+highlight! link NERDTreeLinkTarget NfmTurquoise
+highlight! link NERDTreeOpenable NfmEmerald
+highlight! link NERDTreePart NfmGrey0
+highlight! link NERDTreePartFile NfmGrey0
+highlight! link NERDTreeUp NfmBlue
 
 " NERDTree Git plugin
-highlight! link NERDTreeGitStatusDirDirty NeomoonflyKhaki
-highlight! link NERDTreeGitStatusModified NeomoonflyCrimson
-highlight! link NERDTreeGitStatusRenamed NeomoonflySky
-highlight! link NERDTreeGitStatusStaged NeomoonflySky
-highlight! link NERDTreeGitStatusUntracked NeomoonflyRed
+highlight! link NERDTreeGitStatusDirDirty NfmKhaki
+highlight! link NERDTreeGitStatusModified NfmCrimson
+highlight! link NERDTreeGitStatusRenamed NfmSky
+highlight! link NERDTreeGitStatusStaged NfmSky
+highlight! link NERDTreeGitStatusUntracked NfmRed
 
 " fern.vim plugin
-highlight! link FernBranchSymbol NeomoonflyEmerald
-highlight! link FernBranchText NeomoonflyBlue
-highlight! link FernMarkedLine NeomoonflyYellow
-highlight! link FernMarkedText NeomoonflyCrimson
-highlight! link FernRootSymbol NeomoonflyPurple
-highlight! link FernRootText NeomoonflyPurple
+highlight! link FernBranchSymbol NfmEmerald
+highlight! link FernBranchText NfmBlue
+highlight! link FernMarkedLine NfmYellow
+highlight! link FernMarkedText NfmCrimson
+highlight! link FernRootSymbol NfmPurple
+highlight! link FernRootText NfmPurple
 
 " fern-git-status.vim plugin
-highlight! link FernGitStatusBracket NeomoonflyGrey246
-highlight! link FernGitStatusIndex NeomoonflyEmerald
-highlight! link FernGitStatusWorktree NeomoonflyCrimson
+highlight! link FernGitStatusBracket NfmGrey246
+highlight! link FernGitStatusIndex NfmEmerald
+highlight! link FernGitStatusWorktree NfmCrimson
 
 " Misc stylings
-highlight! link bufExplorerHelp NeomoonflyGrey247
-highlight! link bufExplorerSortBy NeomoonflyGrey247
-highlight! link CleverFDefaultLabel NeomoonflyCrimson
-highlight! link CtrlPMatch NeomoonflyCoral
-highlight! link Directory NeomoonflyBlue
-highlight! link HighlightedyankRegion NeomoonflyGrey0
-highlight! link jsonKeyword NeomoonflySky
-highlight! link jsonQuote NeomoonflyWhite
-highlight! link netrwClassify NeomoonflyCranberry
-highlight! link netrwDir NeomoonflySky
-highlight! link netrwExe NeomoonflyKhaki
-highlight! link tagName NeomoonflyTurquoise
-highlight! link Cheat40Header NeomoonflyBlue
-highlight! link yamlBlockMappingKey NeomoonflySky
-highlight! link yamlFlowMappingKey NeomoonflySky
-if g:neomoonflyUnderlineMatchParen
+highlight! link bufExplorerHelp NfmGrey247
+highlight! link bufExplorerSortBy NfmGrey247
+highlight! link CleverFDefaultLabel NfmCrimson
+highlight! link CtrlPMatch NfmCoral
+highlight! link Directory NfmBlue
+highlight! link HighlightedyankRegion NfmGrey0
+highlight! link jsonKeyword NfmSky
+highlight! link jsonQuote NfmWhite
+highlight! link netrwClassify NfmCranberry
+highlight! link netrwDir NfmSky
+highlight! link netrwExe NfmKhaki
+highlight! link tagName NfmTurquoise
+highlight! link Cheat40Header NfmBlue
+highlight! link yamlBlockMappingKey NfmSky
+highlight! link yamlFlowMappingKey NfmSky
+if g:nfmUnderlineMatchParen
     exec 'highlight MatchWord cterm=underline gui=underline guisp=' . s:coral.hex
 else
-    highlight! link MatchWord NeomoonflyCoral
+    highlight! link MatchWord NfmCoral
 endif
 exec 'highlight snipLeadingSpaces ctermbg=bg ctermfg=fg guibg=bg guifg=fg'
 exec 'highlight MatchWordCur ctermbg=bg guibg=bg'
@@ -834,7 +834,7 @@ exec 'highlight DiffDelete ctermbg=' . s:grey236.term . ' ctermfg=' . s:crimson.
 exec 'highlight DiffText ctermbg=' . s:blue.term . ' ctermfg=' . s:black.term . ' guibg=' . s:blue.hex . ' guifg=' . s:black.hex . ' gui=none'
 
 " ALE plugin
-if g:neomoonflyUndercurls
+if g:nfmUndercurls
      exec 'highlight ALEError ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:red.hex
      exec 'highlight ALEWarning ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:yellow.hex
      exec 'highlight ALEInfo ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:sky.hex
@@ -843,23 +843,23 @@ else
     exec 'highlight ALEWarning ctermbg=NONE guibg=NONE'
     exec 'highlight ALEInfo ctermbg=NONE guibg=NONE'
 endif
-highlight! link ALEVirtualTextError NeomoonflyGrey241
-highlight! link ALEErrorSign NeomoonflyRedAlert
-highlight! link ALEVirtualTextWarning NeomoonflyGrey241
-highlight! link ALEWarningSign NeomoonflyYellowAlert
-highlight! link ALEVirtualTextInfo NeomoonflyGrey241
-highlight! link ALEInfoSign NeomoonflySkyAlert
+highlight! link ALEVirtualTextError NfmGrey241
+highlight! link ALEErrorSign NfmRedAlert
+highlight! link ALEVirtualTextWarning NfmGrey241
+highlight! link ALEWarningSign NfmYellowAlert
+highlight! link ALEVirtualTextInfo NfmGrey241
+highlight! link ALEInfoSign NfmSkyAlert
 
 " GitGutter plugin
-highlight! link GitGutterAdd NeomoonflyEmeraldAlert
-highlight! link GitGutterChange NeomoonflyYellowAlert
-highlight! link GitGutterChangeDelete NeomoonflyCoralAlert
-highlight! link GitGutterDelete NeomoonflyRedAlert
+highlight! link GitGutterAdd NfmEmeraldAlert
+highlight! link GitGutterChange NfmYellowAlert
+highlight! link GitGutterChangeDelete NfmCoralAlert
+highlight! link GitGutterDelete NfmRedAlert
 
 " Signify plugin
-highlight! link SignifySignAdd NeomoonflyEmeraldAlert
-highlight! link SignifySignChange NeomoonflyYellowAlert
-highlight! link SignifySignDelete NeomoonflyRedAlert
+highlight! link SignifySignAdd NfmEmeraldAlert
+highlight! link SignifySignChange NfmYellowAlert
+highlight! link SignifySignDelete NfmRedAlert
 
 " FZF plugin
 exec 'highlight fzf1 ctermfg=' . s:crimson.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:crimson.hex . ' guibg=' . s:grey236.hex
@@ -885,7 +885,7 @@ let g:fzf_colors = {
   \}
 
 " Coc plugin (see issue: https://github.com/bluz71/vim-nightfly-guicolors/issues/31)
-highlight! link CocUnusedHighlight NeomoonflyGrey249
+highlight! link CocUnusedHighlight NfmGrey249
 
 " indentLine plugin
 if !exists('g:indentLine_defaultGroup') && !exists('g:indentLine_color_gui') && !exists('g:indentLine_color_term')
@@ -896,11 +896,11 @@ endif
 " Neovim diagnostics
 if has('nvim-0.6')
     " Neovim 0.6 diagnostic
-    highlight! link DiagnosticError NeomoonflyRed
-    highlight! link DiagnosticWarn NeomoonflyYellow
-    highlight! link DiagnosticInfo NeomoonflySky
-    highlight! link DiagnosticHint NeomoonflyWhite
-    if g:neomoonflyUndercurls
+    highlight! link DiagnosticError NfmRed
+    highlight! link DiagnosticWarn NfmYellow
+    highlight! link DiagnosticInfo NfmSky
+    highlight! link DiagnosticHint NfmWhite
+    if g:nfmUndercurls
         exec 'highlight DiagnosticUnderlineError ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:red.hex
         exec 'highlight DiagnosticUnderlineWarn ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:yellow.hex
         exec 'highlight DiagnosticUnderlineInfo ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:sky.hex
@@ -911,22 +911,22 @@ if has('nvim-0.6')
         exec 'highlight DiagnosticUnderlineInfo ctermbg=NONE guibg=NONE gui=underline guisp=' . s:yellow.hex
         exec 'highlight DiagnosticUnderlineHint ctermbg=NONE guibg=NONE gui=underline guisp=' . s:sky.hex
     endif
-    highlight! link DiagnosticVirtualTextError NeomoonflyGrey241
-    highlight! link DiagnosticVirtualTextWarn NeomoonflyGrey241
-    highlight! link DiagnosticVirtualTextInfo NeomoonflyGrey241
-    highlight! link DiagnosticVirtualTextHint NeomoonflyGrey241
-    highlight! link DiagnosticSignError NeomoonflyRedAlert
-    highlight! link DiagnosticSignWarn NeomoonflyYellowAlert
-    highlight! link DiagnosticSignInfo NeomoonflySkyAlert
-    highlight! link DiagnosticSignHint NeomoonflyWhiteAlert
-    highlight! link DiagnosticFloatingError NeomoonflyRed
-    highlight! link DiagnosticFloatingWarn NeomoonflyYellow
-    highlight! link DiagnosticFloatingInfo NeomoonflySky
-    highlight! link DiagnosticFloatingHint NeomoonflyWhite
-    highlight! link LspSignatureActiveParameter NeomoonflyVisual
+    highlight! link DiagnosticVirtualTextError NfmGrey241
+    highlight! link DiagnosticVirtualTextWarn NfmGrey241
+    highlight! link DiagnosticVirtualTextInfo NfmGrey241
+    highlight! link DiagnosticVirtualTextHint NfmGrey241
+    highlight! link DiagnosticSignError NfmRedAlert
+    highlight! link DiagnosticSignWarn NfmYellowAlert
+    highlight! link DiagnosticSignInfo NfmSkyAlert
+    highlight! link DiagnosticSignHint NfmWhiteAlert
+    highlight! link DiagnosticFloatingError NfmRed
+    highlight! link DiagnosticFloatingWarn NfmYellow
+    highlight! link DiagnosticFloatingInfo NfmSky
+    highlight! link DiagnosticFloatingHint NfmWhite
+    highlight! link LspSignatureActiveParameter NfmVisual
 elseif has('nvim-0.5')
     " Neovim 0.5 LSP diagnostics
-    if g:neomoonflyUndercurls
+    if g:nfmUndercurls
         exec 'highlight LspDiagnosticsUnderlineError ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:red.hex
         exec 'highlight LspDiagnosticsUnderlineWarning ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:yellow.hex
         exec 'highlight LspDiagnosticsUnderlineInformation ctermbg=NONE guibg=NONE gui=undercurl guisp=' . s:sky.hex
@@ -937,30 +937,30 @@ elseif has('nvim-0.5')
         exec 'highlight LspDiagnosticsUnderlineInformation ctermbg=NONE guibg=NONE gui=underline guisp=' . s:yellow.hex
         exec 'highlight LspDiagnosticsUnderlineHint ctermbg=NONE guibg=NONE gui=underline guisp=' . s:sky.hex
     endif
-    highlight! link LspDiagnosticsVirtualTextWarning NeomoonflyGrey241
-    highlight! link LspDiagnosticsVirtualTextError NeomoonflyGrey241
-    highlight! link LspDiagnosticsVirtualTextInformation NeomoonflyGrey241
-    highlight! link LspDiagnosticsVirtualTextHint NeomoonflyGrey241
-    highlight! link LspDiagnosticsSignError NeomoonflyRedAlert
-    highlight! link LspDiagnosticsSignWarning NeomoonflyYellowAlert
-    highlight! link LspDiagnosticsSignInformation NeomoonflySkyAlert
-    highlight! link LspDiagnosticsSignHint NeomoonflyWhiteAlert
-    highlight! link LspDiagnosticsFloatingError NeomoonflyRed
-    highlight! link LspDiagnosticsFloatingWarning NeomoonflyYellow
-    highlight! link LspDiagnosticsFloatingInformation NeomoonflySky
-    highlight! link LspDiagnosticsFloatingHint NeomoonflyWhite
-    highlight! link LspSignatureActiveParameter NeomoonflyVisual
+    highlight! link LspDiagnosticsVirtualTextWarning NfmGrey241
+    highlight! link LspDiagnosticsVirtualTextError NfmGrey241
+    highlight! link LspDiagnosticsVirtualTextInformation NfmGrey241
+    highlight! link LspDiagnosticsVirtualTextHint NfmGrey241
+    highlight! link LspDiagnosticsSignError NfmRedAlert
+    highlight! link LspDiagnosticsSignWarning NfmYellowAlert
+    highlight! link LspDiagnosticsSignInformation NfmSkyAlert
+    highlight! link LspDiagnosticsSignHint NfmWhiteAlert
+    highlight! link LspDiagnosticsFloatingError NfmRed
+    highlight! link LspDiagnosticsFloatingWarning NfmYellow
+    highlight! link LspDiagnosticsFloatingInformation NfmSky
+    highlight! link LspDiagnosticsFloatingHint NfmWhite
+    highlight! link LspSignatureActiveParameter NfmVisual
 endif
 
 " Neovim only plugins
 if has('nvim')
     " NvimTree plugin
-    highlight! link NvimTreeFolderIcon NeomoonflyBlue
-    highlight! link NvimTreeFolderName NeomoonflyBlue
-    highlight! link NvimTreeIndentMarker NeomoonflyGrey236
-    highlight! link NvimTreeOpenedFolderName NeomoonflyBlue
-    highlight! link NvimTreeRootFolder NeomoonflyPurple
-    highlight! link NvimTreeSpecialFile NeomoonflyYellow
+    highlight! link NvimTreeFolderIcon NfmBlue
+    highlight! link NvimTreeFolderName NfmBlue
+    highlight! link NvimTreeIndentMarker NfmGrey236
+    highlight! link NvimTreeOpenedFolderName NfmBlue
+    highlight! link NvimTreeRootFolder NfmPurple
+    highlight! link NvimTreeSpecialFile NfmYellow
     highlight! link NvimTreeWindowPicker DiffChange
     exec 'highlight NvimTreeExecFile ctermfg=' . s:green.term . ' guifg=' . s:green.hex . ' gui=none'
     exec 'highlight NvimTreeImageFile ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex . ' gui=none'
@@ -968,39 +968,39 @@ if has('nvim')
     exec 'highlight NvimTreeSymlink ctermfg=' . s:turquoise.term . ' guifg=' . s:turquoise.hex . ' gui=none'
 
     " Telescope plugin
-    highlight! link TelescopeBorder NeomoonflyGrey236
-    highlight! link TelescopeMatching NeomoonflyCoral
-    highlight! link TelescopeMultiSelection NeomoonflyCrimson
-    highlight! link TelescopeNormal NeomoonflyGrey249
-    highlight! link TelescopePreviewDate NeomoonflyGrey246
-    highlight! link TelescopePreviewGroup NeomoonflyGrey246
-    highlight! link TelescopePreviewLink NeomoonflyTurquoise
-    highlight! link TelescopePreviewMatch NeomoonflyVisual
-    highlight! link TelescopePreviewRead NeomoonflyOrange
-    highlight! link TelescopePreviewSize NeomoonflyEmerald
-    highlight! link TelescopePreviewUser NeomoonflyGrey246
-    highlight! link TelescopePromptPrefix NeomoonflyBlue
-    highlight! link TelescopeResultsDiffAdd NeomoonflyGreen
-    highlight! link TelescopeResultsDiffChange NeomoonflyRed
-    highlight! link TelescopeResultsSpecialComment NeomoonflyGrey241
-    highlight! link TelescopeSelectionCaret NeomoonflyCrimson
-    highlight! link TelescopeTitle NeomoonflyGrey241
+    highlight! link TelescopeBorder NfmGrey236
+    highlight! link TelescopeMatching NfmCoral
+    highlight! link TelescopeMultiSelection NfmCrimson
+    highlight! link TelescopeNormal NfmGrey249
+    highlight! link TelescopePreviewDate NfmGrey246
+    highlight! link TelescopePreviewGroup NfmGrey246
+    highlight! link TelescopePreviewLink NfmTurquoise
+    highlight! link TelescopePreviewMatch NfmVisual
+    highlight! link TelescopePreviewRead NfmOrange
+    highlight! link TelescopePreviewSize NfmEmerald
+    highlight! link TelescopePreviewUser NfmGrey246
+    highlight! link TelescopePromptPrefix NfmBlue
+    highlight! link TelescopeResultsDiffAdd NfmGreen
+    highlight! link TelescopeResultsDiffChange NfmRed
+    highlight! link TelescopeResultsSpecialComment NfmGrey241
+    highlight! link TelescopeSelectionCaret NfmCrimson
+    highlight! link TelescopeTitle NfmGrey241
     exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey254.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey254.hex
 
     " gitsigns.nvim plugin
-    highlight! link GitSignsAdd NeomoonflyEmeraldAlert
-    highlight! link GitSignsChange NeomoonflyYellowAlert
-    highlight! link GitSignsChangeNr NeomoonflyYellowAlert
-    highlight! link GitSignsChangeLn NeomoonflyYellowAlert
-    highlight! link GitSignsChangeDelete NeomoonflyCoralAlert
-    highlight! link GitSignsDelete NeomoonflyRedAlert
+    highlight! link GitSignsAdd NfmEmeraldAlert
+    highlight! link GitSignsChange NfmYellowAlert
+    highlight! link GitSignsChangeNr NfmYellowAlert
+    highlight! link GitSignsChangeLn NfmYellowAlert
+    highlight! link GitSignsChangeDelete NfmCoralAlert
+    highlight! link GitSignsDelete NfmRedAlert
 
     " Hop plugin
     highlight! link HopCursor IncSearch
-    highlight! link HopNextKey NeomoonflyYellow
-    highlight! link HopNextKey1 NeomoonflyBlue
-    highlight! link HopNextKey2 NeomoonflyCrimson
-    highlight! link HopUnmatched NeomoonflyGrey247
+    highlight! link HopNextKey NfmYellow
+    highlight! link HopNextKey1 NfmBlue
+    highlight! link HopNextKey2 NfmCrimson
+    highlight! link HopUnmatched NfmGrey247
 
     " Barbar plugin
     exec 'highlight BufferCurrent      ctermbg=' . s:grey234.term . ' ctermfg=' . s:white.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:white.hex
@@ -1016,38 +1016,38 @@ if has('nvim')
     exec 'highlight BufferInactiveSign ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey247.term . ' guibg=' . s:grey236.hex . ' guifg=' . s:grey247.hex
 
     " nvim-cmp plugin
-    highlight! link CmpItemAbbrMatch NeomoonflyGrey254
-    highlight! link CmpItemAbbrMatchFuzzy NeomoonflyCoral
-    highlight! link CmpItemKindDefault NeomoonflyWhite
-    highlight! link CmpItemKindClass NeomoonflyEmerald
-    highlight! link CmpItemKindColor NeomoonflyTurquoise
-    highlight! link CmpItemKindConstant NeomoonflyPurple
-    highlight! link CmpItemKindConstructor NeomoonflySky
-    highlight! link CmpItemKindEnum NeomoonflyViolet
-    highlight! link CmpItemKindEnumMember NeomoonflyTurquoise
-    highlight! link CmpItemKindEvent NeomoonflyViolet
-    highlight! link CmpItemKindField NeomoonflyTurquoise
-    highlight! link CmpItemKindFile NeomoonflyBlue
-    highlight! link CmpItemKindFolder NeomoonflyBlue
-    highlight! link CmpItemKindFunction NeomoonflySky
-    highlight! link CmpItemKindInterface NeomoonflyEmerald
-    highlight! link CmpItemKindKeyword NeomoonflyViolet
-    highlight! link CmpItemKindMethod NeomoonflySky
-    highlight! link CmpItemKindModule NeomoonflyEmerald
-    highlight! link CmpItemKindOperator NeomoonflyViolet
-    highlight! link CmpItemKindProperty NeomoonflyTurquoise
-    highlight! link CmpItemKindReference NeomoonflyTurquoise
-    highlight! link CmpItemKindStruct NeomoonflyEmerald
-    highlight! link CmpItemKindTypeParameter NeomoonflyEmerald
-    highlight! link CmpItemKindUnit NeomoonflyTurquoise
-    highlight! link CmpItemKindValue NeomoonflyTurquoise
-    highlight! link CmpItemKindVariable NeomoonflyTurquoise
-    highlight! link CmpItemMenu NeomoonflyGrey247
+    highlight! link CmpItemAbbrMatch NfmGrey254
+    highlight! link CmpItemAbbrMatchFuzzy NfmCoral
+    highlight! link CmpItemKindDefault NfmWhite
+    highlight! link CmpItemKindClass NfmEmerald
+    highlight! link CmpItemKindColor NfmTurquoise
+    highlight! link CmpItemKindConstant NfmPurple
+    highlight! link CmpItemKindConstructor NfmSky
+    highlight! link CmpItemKindEnum NfmViolet
+    highlight! link CmpItemKindEnumMember NfmTurquoise
+    highlight! link CmpItemKindEvent NfmViolet
+    highlight! link CmpItemKindField NfmTurquoise
+    highlight! link CmpItemKindFile NfmBlue
+    highlight! link CmpItemKindFolder NfmBlue
+    highlight! link CmpItemKindFunction NfmSky
+    highlight! link CmpItemKindInterface NfmEmerald
+    highlight! link CmpItemKindKeyword NfmViolet
+    highlight! link CmpItemKindMethod NfmSky
+    highlight! link CmpItemKindModule NfmEmerald
+    highlight! link CmpItemKindOperator NfmViolet
+    highlight! link CmpItemKindProperty NfmTurquoise
+    highlight! link CmpItemKindReference NfmTurquoise
+    highlight! link CmpItemKindStruct NfmEmerald
+    highlight! link CmpItemKindTypeParameter NfmEmerald
+    highlight! link CmpItemKindUnit NfmTurquoise
+    highlight! link CmpItemKindValue NfmTurquoise
+    highlight! link CmpItemKindVariable NfmTurquoise
+    highlight! link CmpItemMenu NfmGrey247
 endif
 
 " of course, we need to have a dark background
 " i mean... how could you not?
 set background=dark
 
-exec 'hi Normal guibg=' . g:neomoonflyNormalBg . ' guifg=' . g:neomoonflyNormalFg
-exec 'hi LineNr guibg=' . g:neomoonflyLineNrBg . ' guifg=' . g:neomoonflyLineNrFg
+exec 'hi Normal guibg=' . g:nfmNormalBg . ' guifg=' . g:nfmNormalFg
+exec 'hi LineNr guibg=' . g:nfmLineNrBg . ' guifg=' . g:nfmLineNrFg
