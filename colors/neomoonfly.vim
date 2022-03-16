@@ -1049,5 +1049,5 @@ endif
 " i mean... how could you not?
 set background=dark
 
-exec 'hi Normal guibg=' . g:nmfNormalBg . ' guifg=' . g:nfmNormalFg
-exec 'hi LineNr guibg=' . g:nmfLineNrBg . ' guifg=' . g:nfmLineNrFg
+exec 'hi Normal guibg=' . g:nmfNormalBg . ' guifg=' . g:nmfNormalFg
+exec 'hi LineNr guibg=' . g:nmfLineNrBg . ' guifg=' . g:nmfLineNrFg
