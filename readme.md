@@ -33,7 +33,7 @@ Check out some screenshots [here](./screenshots/readme.md).
 Here's an example of getting _neomoonfly_ set up. This configures all of the
 default options (you could omit all of the `let` statements and be completely
 fine) and sets the color scheme to _neomoonfly_.
-```vimscript
+```vim
 let g:nmfCursorColor = 0
 let g:nmfItalics = 1
 let g:nmfNormalFloat = 0
