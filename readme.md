@@ -45,16 +45,27 @@ let g:nmfVertSplits = 1
 
 let g:nmfCursorLine = 1
 let g:nmfCursorColumn = 1
+
 let g:nmfCursorLineColor = '#312a5e'
 let g:nmfCursorColumnColor = '#312a5e'
+
 let g:nmfCursorLineColorInsert = '#23007a'
 let g:nmfCursorColumnColorInsert = '#23007a'
+
 let g:nmfNormalBg = '#000000'
 let g:nmfNormalFg = '#7de8aa'
+
 let g:nmfLineNrBg = '#000000'
 let g:nmfLineNrFg = '#00ffd9'
 
+" if you use airline and want to use neomoonfly for airline:
+let g:airline_theme = 'neomoonfly'
+
+" set the color scheme to moonfly
 color neomoonfly
+
+" optionally, you could do:
+" color neomoonflyext
 ```
 
 ## Additional Configuration
