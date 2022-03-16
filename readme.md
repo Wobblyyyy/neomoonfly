@@ -1,5 +1,3 @@
-# _neomoonfly_
-
 ![_neomoonfly_](./screenshots/logo.png)
 
 _neomoonfly_ is a fork of the [_moonfly_](https://github.com/bluz71/vim-moonfly-colors)
