@@ -1,10 +1,14 @@
 # _neomoonfly_
+
 ![_neomoonfly_](./screenshots/pallete.png)
+
 _neomoonfly_ is a fork of the [_moonfly_](https://github.com/bluz71/vim-moonfly-colors)
 theme created by bluz71. I take absolutely no credit for the vast majority of
 the theme: there are a couple of minor modifications made to accommodate for
 some of my personal preferences, but other than that, it's pretty much exactly
 the same.
+
+![_vimscipt_](./screenshots/vimscript.png)
 
 Sources of inspiration for the original _moonfly_ theme include:
 
