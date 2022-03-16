@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Base16 - GNOME Terminal color scheme install script
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Nfm"
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="Nfm"
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Nmf"
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="Nmf"
 [[ -z "$DCONF" ]] && DCONF=dconf
 [[ -z "$UUIDGEN" ]] && UUIDGEN=uuidgen
 

@@ -21,23 +21,23 @@ Check out some screenshots [here](./screenshots/readme.md).
 ## Additional Configuration
 _neomoonfly_ adds a couple of "features," if you'll call them that, to the
 original _moonfly_. Those are as follows:
-- `g:nfmCursorLine`: 0 to disable cursor line, 1 to enable cursor line
-- `g:nfmCursorColumn`: 0 to disable cursor column, 1 to enable cursor column
-- `g:nfmCursorLineColor`: a hex color (ex. `#00ff00`), highlights the
+- `g:nmfCursorLine`: 0 to disable cursor line, 1 to enable cursor line
+- `g:nmfCursorColumn`: 0 to disable cursor column, 1 to enable cursor column
+- `g:nmfCursorLineColor`: a hex color (ex. `#00ff00`), highlights the
   cursor's row/line when not in insert mode
-- `g:nfmCursorColumnColor`: a hex color (ex. `#00ff00`), highlights the
+- `g:nmfCursorColumnColor`: a hex color (ex. `#00ff00`), highlights the
   cursor's column when not in insert mode
-- `g:nfmCursorLineColorInsert`: a hex color (ex. `#00ff00`),
+- `g:nmfCursorLineColorInsert`: a hex color (ex. `#00ff00`),
   highlights the cursor's row/line when not in insert mode
-- `g:nfmCursorColumnColorInsert`: a hex color (ex. `#00ff00`),
+- `g:nmfCursorColumnColorInsert`: a hex color (ex. `#00ff00`),
   highlights the cursor's column when not in insert mode
-- `g:nfmNormalBg`: a hex color, default text background
-- `g:nfmNormalFg`: a hex color, default text foreground
-- `g:nfmLineNrBg`: a hex color, default line number background
-- `g:nfmLineNrFg`: a hex color, defualt line number foreground
+- `g:nmfNormalBg`: a hex color, default text background
+- `g:nmfNormalFg`: a hex color, default text foreground
+- `g:nmfLineNrBg`: a hex color, default line number background
+- `g:nmfLineNrFg`: a hex color, defualt line number foreground
 
-## _nfmext_ color scheme
-Click [here](./nfmext.md) to learn more!
+## _nmfext_ color scheme
+Click [here](./nmfext.md) to learn more!
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)

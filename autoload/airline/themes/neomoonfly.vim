@@ -1,4 +1,4 @@
-" nfm color scheme for airline (https://github.com/vim-airline/vim-airline).
+" nmf color scheme for airline (https://github.com/vim-airline/vim-airline).
 "
 " URL:     github.com/bluz71/vim-moonfly-colors
 " License: MIT (https://opensource.org/licenses/MIT)
