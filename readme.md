@@ -4,7 +4,8 @@ _neomoonfly_ is a fork of the [_moonfly_](https://github.com/bluz71/vim-moonfly-
 theme created by bluz71. I take absolutely no credit for the vast majority of
 the theme: there are a couple of minor modifications made to accommodate for
 some of my personal preferences, but other than that, it's pretty much exactly
-the same.
+the same. Because too many changes have been made to the original theme, this
+theme will NOT be receiving any updates the original _moonfly_ does.
 
 Sources of inspiration for the original _moonfly_ theme include:
 
@@ -47,8 +48,8 @@ let g:nmfCursorColumn = 1
 let g:nmfCursorLineColor = '#312a5e'
 let g:nmfCursorColumnColor = '#312a5e'
 
-let g:nmfCursorLineColorInsert = '#23007a'
-let g:nmfCursorColumnColorInsert = '#23007a'
+let g:nmfCursorLineColorInsert = '#66292d'
+let g:nmfCursorColumnColorInsert = '#66292d'
 
 let g:nmfNormalBg = '#000000'
 let g:nmfNormalFg = '#7de8aa'
