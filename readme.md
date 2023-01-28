@@ -21,17 +21,15 @@ Although not even tangentially related to _neomoonfly_ or _moonfly_, bluz71,
 the creator of _moonfly_, maintains another theme named _nightfly_, which is
 available [here](https://github.com/bluz71/vim-nightfly-guicolors).
 
-I fully intend on keeping _neomoonfly_ completely up-to-date with the
-original _moonfly_ color scheme, but this is a fork of the project: there
-will invariably be some divergences.
-
 ## Screenshots
+
 Check out some screenshots [here](./screenshots/readme.md).
 
 ## Quickstart
+
 Here's an example of getting _neomoonfly_ set up. This configures all of the
-default options (you could omit all of the `let` statements and be completely
-fine) and sets the color scheme to _neomoonfly_.
+default options (you could omit all of lines starting with `let` and be
+completely fine) and sets the color scheme to _neomoonfly_.
 ```vim
 let g:nmfCursorColor = 0
 let g:nmfItalics = 1
@@ -68,8 +66,10 @@ color neomoonfly
 ```
 
 ## Additional Configuration
+
 _neomoonfly_ adds a couple of "features," if you'll call them that, to the
 original _moonfly_. Those are as follows:
+
 - `g:nmfCursorLine`: 0 to disable cursor line, 1 to enable cursor line
   (1 by default)
 - `g:nmfCursorColumn`: 0 to disable cursor column, 1 to enable cursor column
@@ -79,16 +79,18 @@ original _moonfly_. Those are as follows:
 - `g:nmfCursorColumnColor`: a hex color (ex. `#00ff00`), highlights the
   cursor's column when not in insert mode
 - `g:nmfCursorLineColorInsert`: a hex color (ex. `#00ff00`),
-  highlights the cursor's row/line when not in insert mode
+  highlights the cursor's row/line when in insert mode
 - `g:nmfCursorColumnColorInsert`: a hex color (ex. `#00ff00`),
-  highlights the cursor's column when not in insert mode
+  highlights the cursor's column when in insert mode
 - `g:nmfNormalBg`: a hex color, default text background
 - `g:nmfNormalFg`: a hex color, default text foreground
 - `g:nmfLineNrBg`: a hex color, default line number background
 - `g:nmfLineNrFg`: a hex color, defualt line number foreground
 
 ## _neomoonflyext_ color scheme
+
 Click [here](./neomoonflyext.md) to learn more!
 
 ## License
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
